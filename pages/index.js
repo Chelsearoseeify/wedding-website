@@ -44,7 +44,26 @@ export default function Home() {
 					</div>
 				))}
 			</nav>
-			<main className={styles.main}></main>
+			<main className={styles.main}>
+				<section className={styles.course}>
+					<h1>Courses Smigol offers </h1>
+					<p>There are a lot of courses available </p>
+					<div className={styles.row}>
+						<div className={styles["course-col"]}>
+							<h3>FRANK</h3>
+							<p>My little smoochy cutie pie</p>
+						</div>
+						<div className={styles["course-col"]}>
+							<h3>PUZZETTA</h3>
+							<p>My fluffy silly doggy</p>
+						</div>
+						<div className={styles["course-col"]}>
+							<h3>NENE</h3>
+							<p>My big sis</p>
+						</div>
+					</div>
+				</section>
+			</main>
 		</div>
 	);
 }
