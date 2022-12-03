@@ -40,19 +40,12 @@
 	z-index: 0;
 }
 
-.leave {
-	position: absolute;
-	z-index: 1;
+.button {
+	color: white;
+	background: $nav-background-color !important;
+	border-radius: 2em !important;
+}
 
-	&_top {
-		@extend .leave;
-		top: 0;
-		right: -90px;
-	}
-
-	&_bottom {
-		@extend .leave;
-		bottom: 0%;
-		left: -22%;
-	}
+.icon_button {
+	margin-bottom: 4px;
 }
