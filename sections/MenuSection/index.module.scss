@@ -1,0 +1,28 @@
+@import './../../styles/mixins.scss';
+
+.container {
+	/* padding: $base-space-md; */
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		/* padding: $base-space-xs; */
+	}
+}
+
+.leave {
+	position: absolute;
+	z-index: 1;
+
+	&_top {
+		@extend .leave;
+		top: 0;
+		right: 0;
+	}
+
+	&_bottom {
+		@extend .leave;
+		bottom: -20%;
+		left: 23%;
+	}
+}

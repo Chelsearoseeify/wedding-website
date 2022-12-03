@@ -1,0 +1,58 @@
+@import './../../styles/mixins.scss';
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	position: relative;
+
+	&_title {
+		font-family: $fontfamily-fancy;
+		font-size: 3rem;
+	}
+
+	&_text {
+		font-family: $fontfamily-base;
+		font-size: 1rem;
+	}
+}
+.pseudo_card {
+	position: relative;
+}
+
+.pseudo_card::before {
+	content: url('./../images/leaves/menutop.svg');
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 0rem;
+	right: -9rem;
+	z-index: 0;
+}
+
+.pseudo_card::after {
+	content: url('./../images/leaves/menubottom.svg');
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	bottom: -48rem;
+	left: -5.5rem;
+	z-index: 0;
+}
+
+.leave {
+	position: absolute;
+	z-index: 1;
+
+	&_top {
+		@extend .leave;
+		top: 0;
+		right: -90px;
+	}
+
+	&_bottom {
+		@extend .leave;
+		bottom: 0%;
+		left: -22%;
+	}
+}

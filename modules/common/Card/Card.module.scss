@@ -1,0 +1,11 @@
+@import './../../../styles/mixins.scss';
+
+.container {
+	background-color: $card-background-color;
+	font-family: $fontfamily-base;
+	padding: $base-space-md;
+	box-shadow: 2px 2px 16px #cec5ba;
+	border: 0.5px solid #faf8ef;
+	border-radius: 2px;
+	margin: auto;
+}

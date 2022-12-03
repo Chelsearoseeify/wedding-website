@@ -1,0 +1,67 @@
+@import './../../styles/mixins.scss';
+
+.card {
+	width: 50rem;
+	position: relative;
+}
+
+.leaves {
+	position: absolute;
+	z-index: 3;
+	opacity: 0.7;
+}
+
+.bottom_right {
+	bottom: -1px;
+	right: -1px;
+}
+
+.top_left {
+	top: 0;
+	left: 0;
+}
+
+.date {
+	font-weight: 250;
+	font-size: 2rem;
+	color: $text-color-base;
+}
+.plain_text {
+	font-weight: 250;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	color: #67762e;
+}
+
+.and {
+	position: absolute;
+	left: 40%;
+	right: 40%;
+	top: 35%;
+	bottom: 30%;
+	font-family: $fontfamily-fancy;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12rem;
+	line-height: 309.5%;
+	display: flex;
+	align-items: center;
+	color: rgba(103, 118, 46, 0.2);
+}
+
+.names {
+	&_text {
+		font-size: 6.5rem;
+		width: 100%;
+		color: $text-color-base;
+	}
+	&_container {
+		font-family: $fontfamily-fancy;
+		position: relative;
+		padding: 2rem 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+}

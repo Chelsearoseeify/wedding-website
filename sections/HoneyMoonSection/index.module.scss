@@ -1,0 +1,26 @@
+@import './../../styles/mixins.scss';
+
+.container {
+	/* padding: $base-space-md; */
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		/* padding: $base-space-xs; */
+	}
+}
+
+.card {
+	width: 350px;
+	text-align: center;
+	margin-right: -3rem;
+	z-index: 2;
+}
+
+.lama {
+	background-image: url('./../../public/peru-2.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 27rem;
+	width: 48rem;
+}

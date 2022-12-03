@@ -1,0 +1,17 @@
+@import './../../../styles/mixins.scss';
+
+.heading {
+	font-family: $fontfamily-base;
+	padding: $base-space-md;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&_title {
+		font-size: 2rem;
+	}
+
+	&_subtitle {
+		font-size: 1.2rem;
+	}
+}
