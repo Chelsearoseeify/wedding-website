@@ -3,7 +3,7 @@
 @media screen and (min-width: 400px) {
 	.heading {
 		font-family: $fontfamily-heading;
-		padding: $base-space-md;
+		padding: 2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -23,18 +23,18 @@
 }
 
 .heading {
-	padding: $base-space-md;
+	padding: $base-space;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	max-width: 40rem;
 	text-align: center;
 	margin: auto;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
 
 	&_title {
 		font-family: $fontfamily-heading;
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 	}
 
 	&_subtitle {

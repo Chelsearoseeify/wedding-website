@@ -20,6 +20,7 @@ const emptyGuest = (index = 0) => {
 
 export default function Confirm() {
 	const [guests, setGuests] = useState([emptyGuest()]);
+	const [message, setMessage] = useState('');
 	const [lastUserIndex, setLastUserIndex] = useState(0);
 	const [sent, setSent] = useState(false);
 
@@ -28,6 +29,7 @@ export default function Confirm() {
 		let objToSend = {
 			from_name: guests[0].name,
 			from_surname: guests[0].surname,
+			message: message,
 		};
 
 		guests.forEach((g, index) => (objToSend[`part${index + 1}`] = `- ${g.name} ${g.surname}${g.preferences === '' ? '' : `, ${g.preferences}`}`));
@@ -75,7 +77,13 @@ export default function Confirm() {
 							<Text ml={1} mb={2}>
 								Note Aggiuntive
 							</Text>
-							<Textarea placeholder='Aggiungi qualcosa' resize={'none'} className={styles.input} />
+							<Textarea
+								placeholder='Aggiungi qualcosa'
+								resize={'none'}
+								className={styles.input}
+								value={message}
+								onChange={(event) => setMessage(event.target.value)}
+							/>
 						</div>
 						<Button variant='solid' className={styles.button} margin={'auto'} onClick={onSubmit}>
 							Invia

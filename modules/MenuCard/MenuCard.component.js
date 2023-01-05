@@ -71,7 +71,7 @@ export default function Menu() {
 					<Text className={styles.card_title} align={'center'}>
 						Antipasti
 					</Text>
-					<Flex direction={'column'} gap='2' style={{ maxWidth: '80%' }}>
+					<Flex direction={'column'} gap='2' style={{ maxWidth: '90%' }}>
 						{antipasti.map((a) => (
 							<Flex direction={'column'} gap='0'>
 								<Text className={styles.card_text} align={'center'}>
