@@ -1,19 +1,11 @@
 @import 'mixins.scss';
 .base {
-	background-color: $nav-background-color;
 	height: 100vh;
+	background-color: $background-color;
 }
 
-.container {
-	border-radius: 4px;
-
-	background-color: $background-color;
-	box-shadow: 0px -1px 15px 1px rgb(43 29 1 / 67%);
-	padding: 2rem;
-	min-height: 92%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.section {
+	width: 100vw;
 }
 
 @media only screen and (max-width: 768px) {

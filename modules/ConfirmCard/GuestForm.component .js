@@ -22,19 +22,33 @@ export default function GuestForm({ guest, setGuests }) {
 				<Text ml={1} mb={2}>
 					Nome
 				</Text>
-				<Input placeholder='Il tuo nome' value={guest.name} onChange={(event) => updateGuest(event.target.value, 'name')} />
+				<Input
+					placeholder='Il tuo nome'
+					value={guest.name}
+					onChange={(event) => updateGuest(event.target.value, 'name')}
+					className={styles.input}
+				/>
 			</div>
 			<div>
 				<Text ml={1} mb={2}>
 					Cognome
 				</Text>
-				<Input placeholder='Il tuo cognome' value={guest.surname} onChange={(event) => updateGuest(event.target.value, 'surname')} />
+				<Input
+					placeholder='Il tuo cognome'
+					value={guest.surname}
+					onChange={(event) => updateGuest(event.target.value, 'surname')}
+					className={styles.input}
+				/>
 			</div>
 			<div>
 				<Text ml={1} mb={2}>
 					Preferenze alimentari
 				</Text>
-				<Select defaultValue={'none'} value={guest.preferences} onChange={(event) => updateGuest(event.target.value, 'preferences')}>
+				<Select
+					defaultValue={'none'}
+					value={guest.preferences}
+					onChange={(event) => updateGuest(event.target.value, 'preferences')}
+					className={styles.input}>
 					<option value='none'>Nessuna</option>
 					<option value='celiac'>Celiaco</option>
 					<option value='lactose_intolerant'>Intollerante al lattosio</option>

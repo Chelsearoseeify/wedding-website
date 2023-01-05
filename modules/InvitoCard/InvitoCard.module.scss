@@ -1,64 +1,171 @@
 @import './../../styles/mixins.scss';
 
+@media screen and (min-width: 400px) {
+	.card {
+		width: 40rem;
+		height: fit-content;
+		position: relative;
+		margin-left: -2rem !important;
+
+		&_text-container {
+			padding: 1rem;
+			margin: 2rem;
+			position: relative;
+			z-index: 3;
+			background-color: $card-background-color;
+		}
+	}
+
+	.leaves {
+		position: absolute;
+		width: inherit;
+		height: inherit;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+	}
+
+	.bottom_right {
+		bottom: -1px;
+		right: -1px;
+	}
+
+	.top_left {
+		top: 0;
+		left: 0;
+	}
+
+	.date {
+		font-weight: 250;
+		font-size: 1.7rem;
+		color: $text-color-base;
+	}
+	.plain_text {
+		font-weight: 250;
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		color: #67762e;
+	}
+
+	.and {
+		position: absolute;
+		left: 35%;
+		right: 40%;
+		top: 35%;
+		bottom: 30%;
+		font-family: $fontfamily-fancy;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 9rem;
+		line-height: 309.5%;
+		display: flex;
+		align-items: center;
+		color: rgba(103, 118, 46, 0.2);
+	}
+
+	.names {
+		&_text {
+			font-size: 4rem;
+			width: 100%;
+			color: $text-color-base;
+		}
+		&_container {
+			font-family: $fontfamily-fancy;
+			position: relative;
+			padding: 2rem 3rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+	}
+}
+
 .card {
-	width: 50rem;
+	height: fit-content;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&_container {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		background-color: $card-background-color;
+
+		box-shadow: 2px 2px 16px #cec5ba;
+	}
+
+	&_text-container {
+		position: relative;
+		padding: 7rem 1.5rem;
+		border: 2px solid #b17b63;
+	}
 }
 
 .leaves {
 	position: absolute;
-	z-index: 3;
-	opacity: 0.7;
+	width: 100vw;
+	aspect-ratio: 2;
+	z-index: 2;
 }
 
-.bottom_right {
-	bottom: -1px;
-	right: -1px;
+.bottom {
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
 
-.top_left {
+.top {
 	top: 0;
 	left: 0;
+	right: 0;
 }
 
 .date {
 	font-weight: 250;
-	font-size: 2rem;
+	font-size: 1.7rem;
 	color: $text-color-base;
 }
 .plain_text {
 	font-weight: 250;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	text-transform: uppercase;
 	color: #67762e;
 }
 
 .and {
 	position: absolute;
-	left: 40%;
+	left: 25%;
 	right: 40%;
 	top: 35%;
 	bottom: 30%;
 	font-family: $fontfamily-fancy;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 12rem;
+	font-size: 9rem;
 	line-height: 309.5%;
 	display: flex;
 	align-items: center;
-	color: rgba(103, 118, 46, 0.2);
+	color: rgba(103, 118, 46, 0.1);
 }
 
 .names {
 	&_text {
-		font-size: 6.5rem;
+		font-size: 70px;
+		line-height: 10rem;
 		width: 100%;
 		color: $text-color-base;
+		text-align: center;
 	}
 	&_container {
 		font-family: $fontfamily-fancy;
 		position: relative;
-		padding: 2rem 3rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

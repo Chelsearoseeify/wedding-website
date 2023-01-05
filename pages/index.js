@@ -7,27 +7,41 @@ import LocationSection from '../sections/LocationSection';
 import MenuSection from './../sections/MenuSection/index';
 import HoneyMoonSection from '../sections/HoneyMoonSection/index';
 import ConfirmSection from './../sections/ConfirmSection/index';
+import OurStorySection from './../sections/OurStorySection/index';
 
 export default function Home() {
 	const menuItems = [
-		{ name: 'Invito', section: <InvitoSection /> },
-		{ name: 'La Nostra Storia', section: <>Section 3</> },
-		{ name: 'Location', section: <LocationSection /> },
-		{ name: 'Menu', section: <MenuSection /> },
-		{ name: 'Luna di Miele', section: <HoneyMoonSection /> },
-		{ name: 'Conferma partecipazione', section: <ConfirmSection /> },
-		{ name: 'Contatti', section: <>Section 4</> },
+		{ id: 'invitation', name: 'Invito', section: <InvitoSection /> },
+		{ id: 'our_story', name: 'La Nostra Storia', section: <></> /* <OurStorySection /> */ },
+		{ id: 'location', name: 'Location', section: <></> /* <LocationSection /> */ },
+		{ id: 'menu', name: 'Menu', section: <MenuSection /> },
+		{
+			id: 'honeymoon',
+			name: 'Luna di Miele',
+			section: <></> /* <HoneyMoonSection /> */,
+		},
+		{
+			id: 'confirmation',
+			name: 'Conferma partecipazione',
+			section: <ConfirmSection />,
+		},
+		{ id: 'contacts', name: 'Contatti', section: <></> },
 	];
-	const [selectedMenuItem, setSelectedMenuItem] = useState('Conferma partecipazione');
+	const [selectedMenuItem, setSelectedMenuItem] = useState('La Nostra Storia');
 	return (
 		<div className={styles.base}>
-			<Navbar items={menuItems.map((i) => i.name)} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
+			{/* 	<Navbar items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
+			 */}
 
-			<div className={styles.container}>
-				{menuItems.map((item) => {
-					return <>{item.name === selectedMenuItem && item.section}</>;
-				})}
-			</div>
+			{menuItems.map((item) => {
+				return (
+					<div id={item.id} className={styles.section}>
+						{item.section}
+					</div>
+				);
+			})}
+
+			<div className={styles.footer}>FOOTER</div>
 		</div>
 	);
 }

@@ -1,0 +1,101 @@
+@import './../../styles/mixins.scss';
+
+.card {
+	width: 500px;
+	position: relative;
+	z-index: 2;
+
+	&_leave {
+		content: '';
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		z-index: 1;
+
+		&--1::before {
+			@extend .card_leave;
+			background-image: url('./../images/people/1-leave.svg');
+			height: 150px;
+			width: 150px;
+			top: -58px;
+			right: -78px;
+		}
+		&--2::before {
+			@extend .card_leave;
+			background-image: url('./../images/people/2-leave.svg');
+			height: 150px;
+			width: 150px;
+			top: -58px;
+			left: -74px;
+		}
+		&--3::before {
+			@extend .card_leave;
+			background-image: url('./../images/people/3-leave.svg');
+			height: 150px;
+			width: 150px;
+			top: -58px;
+			right: -97px;
+		}
+		&--4::before {
+			@extend .card_leave;
+			background-image: url('./../images/people/4-leave.svg');
+			height: 150px;
+			width: 150px;
+			top: -58px;
+			left: -64px;
+		}
+		&--5::before {
+			@extend .card_leave;
+			background-image: url('./../images/people/5-leave.svg');
+			height: 150px;
+			width: 150px;
+			top: -58px;
+			right: -78px;
+		}
+	}
+}
+.card_title {
+	font-family: $fontfamily-heading;
+	font-size: 1.2rem;
+}
+
+.card_image {
+}
+
+.image {
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&-1 {
+		@extend .image;
+		background-image: url('./../images/people/1.svg');
+		height: 211px;
+		aspect-ratio: 1/2;
+	}
+
+	&-2 {
+		@extend .image;
+		background-image: url('./../images/people/2.svg');
+		height: 227px;
+		aspect-ratio: 3/5;
+		margin-right: 10px;
+	}
+	&-3 {
+		@extend .image;
+		background-image: url('./../images/people/3.svg');
+		height: 251px;
+		aspect-ratio: 1/1;
+	}
+	&-4 {
+		@extend .image;
+		background-image: url('./../images/people/4.svg');
+		height: 254px;
+		aspect-ratio: 1/1;
+	}
+	&-5 {
+		@extend .image;
+		background-image: url('./../images/people/5.svg');
+		height: 227px;
+		aspect-ratio: 4/5;
+	}
+}

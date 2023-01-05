@@ -1,7 +1,6 @@
 @import './../../styles/mixins.scss';
 
 .container {
-	/* padding: $base-space-md; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -11,7 +10,7 @@
 }
 
 .card {
-	width: 350px;
+	width: 450px;
 	text-align: center;
 	margin-right: -3rem;
 	z-index: 2;
@@ -23,4 +22,21 @@
 	background-repeat: no-repeat;
 	height: 27rem;
 	width: 48rem;
+}
+
+.iban_container {
+	border-radius: 2rem;
+	background-color: $nav-background-color;
+	padding: 0rem 0rem 0rem 1rem;
+	margin: auto;
+	color: #ffffffb3;
+	font-weight: bolder;
+}
+
+.copy_iban {
+	background-color: transparent !important;
+
+	&:hover {
+		color: white;
+	}
 }

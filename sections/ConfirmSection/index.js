@@ -5,7 +5,10 @@ import Heading from '../../modules/common/Heading/Heading.component';
 export default function ConfirmSection() {
 	return (
 		<section classNames={styles.container}>
-			<Heading title='Conferma partecipazione' />
+			<Heading
+				title='Conferma partecipazione'
+				subtitle={'Aggiungi qui sotto i nomi di tutti gli invitati che parteciperanno e le loro preferenze alimentari'}
+			/>
 			<Confirm />
 		</section>
 	);

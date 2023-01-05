@@ -7,9 +7,9 @@ export default function Navbar({ items, selectedMenuItem, setSelectedMenuItem })
 	return (
 		<Flex className={styles.nav} align='center' justify='center'>
 			{items.map((item) => (
-				<div className={styles[`nav_item${item === selectedMenuItem ? '--selected' : ''}`]} onClick={() => setSelectedMenuItem(item)}>
-					{item}
-				</div>
+				<a href={'#' + item.id} className={styles[`nav_item${item === selectedMenuItem ? '--selected' : ''}`]}>
+					<div onClick={() => setSelectedMenuItem(item.name)}>{item.name}</div>
+				</a>
 			))}
 		</Flex>
 	);
