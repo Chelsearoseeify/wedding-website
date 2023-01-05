@@ -35,7 +35,7 @@ export default function Home() {
 
 			{menuItems.map((item) => {
 				return (
-					<div id={item.id} className={styles.section}>
+					<div key={item.id} id={item.id} className={styles.section}>
 						{item.section}
 					</div>
 				);
