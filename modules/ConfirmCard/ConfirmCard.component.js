@@ -47,21 +47,20 @@ export default function Confirm() {
 			<Card className={styles.card}>
 				{!sent ? (
 					<Flex direction={'column'} gap={3}>
-						{/* 	{guests.map((g, index) => (
-							<Flex direction={'row'} gap={3} key={g.index} align='end'>
+						{guests.map((g, index) => (
+							<Flex direction={'column'} gap={3} key={g.index} className={styles.form_container}>
 								<GuestForm guest={g} setGuests={setGuests} />
-								{
+								{guests.length > 1 && (
 									<IconButton
 										aria-label='Add guest'
 										icon={<MinusIcon />}
 										onClick={() => setGuests((prev) => prev.filter((guest) => g.index !== guest.index))}
 										className={clsx(styles.button, styles.icon_button)}
 										size={'xs'}
-										disabled={guests.length === 1}
 									/>
-								}
+								)}
 							</Flex>
-						))} */}
+						))}
 						<IconButton
 							aria-label='Add guest'
 							icon={<AddIcon />}
