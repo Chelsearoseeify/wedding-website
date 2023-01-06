@@ -12,7 +12,7 @@ import OurStorySection from './../sections/OurStorySection/index';
 export default function Home() {
 	const menuItems = [
 		{ id: 'invitation', name: 'Invito', section: <InvitoSection /> },
-		{ id: 'our_story', name: 'La Nostra Storia', section: <></> /* <OurStorySection /> */ },
+		{ id: 'our_story', name: 'La Nostra Storia', section: <OurStorySection /> },
 		{ id: 'location', name: 'Location', section: <LocationSection /> },
 		{ id: 'menu', name: 'Menu', section: <MenuSection /> },
 		{
