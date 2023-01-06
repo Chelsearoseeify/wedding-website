@@ -33,12 +33,9 @@ export default function Timeline() {
 	];
 	return (
 		<>
-			<div className={styles.timeline} />
-			<Flex flexDirection={'column'} gap={2}>
+			<Flex flexDirection={'column'} gap={8} className={styles.timeline_container}>
 				{timelineElements.map((e) => (
-					<Flex gap={8} align='center'>
-						<TimelineCard title={e.title} image={e.index} date={e.date} />
-					</Flex>
+					<TimelineCard title={e.title} image={e.index} date={e.date} />
 				))}
 			</Flex>
 		</>

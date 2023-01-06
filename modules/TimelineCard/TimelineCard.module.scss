@@ -5,7 +5,15 @@ $timeline-color: #67762e;
 .container {
 	display: grid;
 	grid-template-areas: 'image title dot' 'image date date';
-	grid-template-columns: 50% 35% 5%;
+	grid-template-columns: 50% 35% 20px;
+	width: 95%;
+	column-gap: 1rem;
+}
+
+.wedding_container {
+	display: grid;
+	grid-template-areas: 'w_title w_image w_dot' 'w_date w_image w_dot';
+	grid-template-columns: 35% 50% 20px;
 	width: 95%;
 	column-gap: 1rem;
 	margin-bottom: 1rem;
@@ -30,6 +38,7 @@ $timeline-color: #67762e;
 	grid-area: dot;
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 
 .date {
@@ -39,12 +48,57 @@ $timeline-color: #67762e;
 	align-items: flex-start;
 }
 
+.w_image {
+	grid-area: w_image;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+.w_title {
+	grid-area: w_title;
+	text-align: end;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& > .card_title {
+		font-size: 1.3rem;
+	}
+}
+
+.w_dot {
+	grid-area: w_dot;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.w_date {
+	grid-area: w_date;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
 .dot_symbol {
 	background-color: #8bac12;
-	border: 3px solid #accf2eb8;
+	border: 3px solid #accf2e5c;
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
+	z-index: 2;
+
+	&::after {
+		content: '';
+		background-color: #8bac12;
+		position: absolute;
+		height: 220px;
+		width: 2px;
+		top: 0;
+		right: 10px;
+		z-index: 1;
+	}
 }
 
 .card {
@@ -110,9 +164,6 @@ $timeline-color: #67762e;
 	line-height: 18px;
 }
 
-.card_image {
-}
-
 .image {
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -145,11 +196,14 @@ $timeline-color: #67762e;
 	&-5 {
 		@extend .image;
 		background-image: url('./../images/people/5.svg');
+		width: 168px;
+		height: 222.08px;
 	}
 }
 
 .date {
 	font-family: $fontfamily-base;
+	line-height: 24px;
 }
 
 .date_month {
@@ -157,6 +211,5 @@ $timeline-color: #67762e;
 }
 .year {
 	font-size: 2rem;
-	line-height: 40px;
 	opacity: 0.8;
 }
