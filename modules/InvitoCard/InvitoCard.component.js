@@ -3,7 +3,6 @@ import { Grid, Text } from '@chakra-ui/react';
 import Card from '../common/Card/Card.component';
 import { InvitationBottom } from '../images/leaves/InvitationBottom';
 import { InvitationTop } from '../images/leaves/InvitationTop';
-import { InvitationLeaves } from '../images/leaves/InvitationLeaves';
 import clsx from 'clsx';
 
 export default function Invito() {

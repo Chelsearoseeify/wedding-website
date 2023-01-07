@@ -8,6 +8,7 @@ import MenuSection from './../sections/MenuSection/index';
 import HoneyMoonSection from '../sections/HoneyMoonSection/index';
 import ConfirmSection from './../sections/ConfirmSection/index';
 import OurStorySection from './../sections/OurStorySection/index';
+import MenuFAB from '../modules/common/MenuFAB/MenuFAB.component';
 
 export default function Home() {
 	const menuItems = [
@@ -30,6 +31,7 @@ export default function Home() {
 	const [selectedMenuItem, setSelectedMenuItem] = useState('La Nostra Storia');
 	return (
 		<div className={styles.base}>
+			<MenuFAB />
 			{/* 	<Navbar items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
 			 */}
 
