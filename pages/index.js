@@ -9,6 +9,7 @@ import HoneyMoonSection from '../sections/HoneyMoonSection/index';
 import ConfirmSection from './../sections/ConfirmSection/index';
 import OurStorySection from './../sections/OurStorySection/index';
 import MenuFAB from '../modules/common/MenuFAB/MenuFAB.component';
+import Footer from './../modules/Footer/Footer.component';
 
 export default function Home() {
 	const menuItems = [
@@ -31,7 +32,7 @@ export default function Home() {
 	const [selectedMenuItem, setSelectedMenuItem] = useState('La Nostra Storia');
 	return (
 		<div className={styles.base}>
-			<MenuFAB />
+			<MenuFAB items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
 			{/* 	<Navbar items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
 			 */}
 
@@ -43,7 +44,7 @@ export default function Home() {
 				);
 			})}
 
-			<div className={styles.footer}>FOOTER</div>
+			<Footer items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
 		</div>
 	);
 }

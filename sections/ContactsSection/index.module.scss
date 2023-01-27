@@ -1,11 +1,1 @@
 @import './../../styles/mixins.scss';
-
-.container {
-	/* padding: $base-space-md; */
-}
-
-@media only screen and (max-width: 768px) {
-	.container {
-		/* padding: $base-space-xs; */
-	}
-}
