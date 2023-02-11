@@ -31,20 +31,22 @@ export default function Home() {
 	];
 	const [selectedMenuItem, setSelectedMenuItem] = useState('La Nostra Storia');
 	return (
-		<div className={styles.base}>
-			<MenuFAB items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
-			{/* 	<Navbar items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
-			 */}
+		<>
+			<div className={styles.base}>
+				<MenuFAB items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
+				{/* 	<Navbar items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
+				 */}
 
-			{menuItems.map((item) => {
-				return (
-					<div key={item.id} id={item.id} className={styles.section}>
-						{item.section}
-					</div>
-				);
-			})}
+				{menuItems.map((item) => {
+					return (
+						<div key={item.id} id={item.id} className={styles.section}>
+							{item.section}
+						</div>
+					);
+				})}
 
-			<Footer items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
-		</div>
+				<Footer items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
+			</div>
+		</>
 	);
 }
