@@ -10,14 +10,13 @@ export default function Invito() {
 		<div className={styles.card_container}>
 			<InvitationTop className={clsx(styles.leaves, styles.top)} />
 			<div className={styles.card}>
-				<Grid gap={2} autoFlow='row dense' className={styles['card_text-container']}>
+				<Grid gap={1} autoFlow='row dense' className={styles['card_text-container']}>
 					<Text className={styles.plain_text} align={'center'}>
 						Siete invitati al matrimonio
 					</Text>
 					<Text className={styles.plain_text} align={'center'}>
 						di
 					</Text>
-
 					<div className={styles.names_container}>
 						<Text className={clsx(styles.names_text, styles.kelly)}>Carlotta</Text>
 						<h1 className={styles.and}>&</h1>
