@@ -1,7 +1,7 @@
 @import './../../styles/mixins.scss';
 
 .footer {
-	background-color: #42703a;
+	background-color: $nav-background-color;
 	padding: 1rem 2.5rem;
 	color: white;
 	font-family: $fontfamily-base;
