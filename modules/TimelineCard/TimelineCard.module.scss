@@ -8,6 +8,7 @@ $timeline-color: #67762e;
 	grid-template-columns: 50% 35% 20px;
 	width: 95%;
 	column-gap: 1rem;
+	margin-bottom: 2rem;
 }
 
 .wedding_container {
@@ -93,7 +94,7 @@ $timeline-color: #67762e;
 		content: '';
 		background-color: #8bac12;
 		position: absolute;
-		height: 220px;
+		height: 250px;
 		width: 2px;
 		top: 0;
 		right: 10px;
