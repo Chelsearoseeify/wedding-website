@@ -1,174 +1,186 @@
-@import './../../styles/mixins.scss';
-
-@media screen and (min-width: 400px) {
-	.card {
-		width: 40rem;
-		height: fit-content;
-		position: relative;
-		margin-left: -2rem !important;
-
-		&_text-container {
-			padding: 1rem;
-			margin: 2rem;
-			position: relative;
-			z-index: 3;
-			background-color: $card-background-color;
-		}
-	}
-
-	.leaves {
-		position: absolute;
-		width: inherit;
-		height: inherit;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 2;
-	}
-
-	.bottom_right {
-		bottom: -1px;
-		right: -1px;
-	}
-
-	.top_left {
-		top: 0;
-		left: 0;
-	}
-
-	.date {
-		font-weight: 250;
-		font-size: 1.7rem;
-		color: $text-color-base;
-	}
-	.plain_text {
-		font-weight: 250;
-		font-size: 1.1rem;
-		text-transform: uppercase;
-		color: #67762e;
-	}
-
-	.and {
-		position: absolute;
-		left: 35%;
-		right: 40%;
-		top: 35%;
-		bottom: 30%;
-		font-family: $fontfamily-fancy;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 9rem;
-		line-height: 309.5%;
-		display: flex;
-		align-items: center;
-		color: rgba(103, 118, 46, 0.2);
-	}
-
-	.names {
-		&_text {
-			font-size: 4rem;
-			width: 100%;
-			color: $text-color-base;
-		}
-		&_container {
-			font-family: $fontfamily-fancy;
-			position: relative;
-			padding: 2rem 3rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-		}
-	}
-}
+@import "./../../styles/mixins.scss";
 
 .card {
-	height: fit-content;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
 
-	&_container {
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: auto;
-		background-color: $card-background-color;
+  &_container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: $card-background-color;
 
-		box-shadow: 2px 2px 16px #cec5ba;
-	}
+    box-shadow: 2px 2px 16px #cec5ba;
+  }
 
-	&_text-container {
-		position: relative;
-		padding: 7rem 1.5rem;
-		border: 2px solid rgba(166, 136, 17, 0.293);
-	}
+  &_text-container {
+    position: relative;
+    padding: 7rem 1.5rem;
+    border: 2px solid rgba(166, 136, 17, 0.293);
+    width: 100%;
+  }
 }
 
 .leaves {
-	position: absolute;
-	width: 100vw;
-	aspect-ratio: 2;
-	z-index: 2;
+  position: absolute;
+  width: 100vw;
+  aspect-ratio: 2;
+  z-index: 2;
 }
 
 .bottom {
-	bottom: -2px;
-	right: 0;
-	left: 0;
+  bottom: -2px;
+  right: 0;
+  left: 0;
 }
 
 .top {
-	top: 0;
-	left: 0;
-	right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .date {
-	font-weight: 250;
-	font-size: 1.7rem;
-	color: $text-color-base;
+  font-weight: 250;
+  font-size: 8vw;
+  color: $text-color-base;
 }
 .plain_text {
-	font-weight: 250;
-	font-size: 1.1rem;
-	text-transform: uppercase;
-	color: #67762e;
+  font-weight: 250;
+  font-size: 3.5vw;
+  text-transform: uppercase;
+  color: #67762e;
 }
 
 .and {
-	position: absolute;
-	left: 25%;
-	right: 40%;
-	top: 35%;
-	bottom: 30%;
-	font-family: $fontfamily-fancy;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 9rem;
-	line-height: 309.5%;
-	display: flex;
-	align-items: center;
-	color: rgba(103, 118, 46, 0.1);
+  position: absolute;
+  left: 30%;
+  right: 40%;
+  top: 35%;
+  bottom: 30%;
+  font-family: $fontfamily-fancy;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20vw;
+  line-height: 309.5%;
+  display: flex;
+  align-items: center;
+  color: rgba(103, 118, 46, 0.1);
 }
 
 .names {
-	&_text {
-		font-size: 70px;
-		line-height: 10rem;
-		width: 100%;
-		color: $text-color-base;
-		text-align: center;
-	}
-	&_container {
-		font-family: $fontfamily-fancy;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-	}
+  &_text {
+    font-size: 18vw;
+    line-height: 18vh;
+    width: 100%;
+    color: $text-color-base;
+    text-align: center;
+  }
+  &_container {
+    font-family: $fontfamily-fancy;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .card {
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+
+    &_container {
+      height: 90vh;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      background-color: $card-background-color;
+
+      box-shadow: 2px 2px 16px #cec5ba;
+    }
+
+    &_text-container {
+      position: relative;
+      padding: 7rem 1.5rem;
+      border: 5px solid rgba(166, 136, 17, 0.293);
+      width: 100%;
+    }
+  }
+
+  .leaves {
+    position: absolute;
+    width: 80%;
+    aspect-ratio: 2;
+    z-index: 2;
+  }
+
+  .bottom {
+    bottom: 4.7%;
+    left: 10%;
+  }
+
+  .top {
+    top: 5%;
+    left: 10%;
+  }
+
+  .date {
+    font-weight: 250;
+    font-size: 8vw;
+    color: $text-color-base;
+  }
+  .plain_text {
+    font-weight: 250;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    color: #67762e;
+  }
+
+  .and {
+    position: absolute;
+    left: 25%;
+    right: 40%;
+    top: 35%;
+    bottom: 30%;
+    font-family: $fontfamily-fancy;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17vh;
+    line-height: 309.5%;
+    display: flex;
+    align-items: center;
+    color: rgba(103, 118, 46, 0.1);
+  }
+
+  .names {
+    &_text {
+      font-size: 15vw;
+      line-height: 18vh;
+      width: 100%;
+      color: $text-color-base;
+      text-align: center;
+    }
+    &_container {
+      font-family: $fontfamily-fancy;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

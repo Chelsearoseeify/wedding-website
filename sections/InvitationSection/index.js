@@ -4,5 +4,5 @@ import Image from 'next/image';
 import { Flex } from '@chakra-ui/react';
 
 export default function InvitoSection() {
-	return <Invito />;
+	return <div className={styles.invito_container}><Invito /></div>;
 }

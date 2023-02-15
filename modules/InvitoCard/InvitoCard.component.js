@@ -20,7 +20,7 @@ export default function Invito() {
 					<div className={styles.names_container}>
 						<Text className={clsx(styles.names_text, styles.kelly)}>Carlotta</Text>
 						<h1 className={styles.and}>&</h1>
-						<Text className={clsx(styles.names_text, styles.ricky)} textAlign={'end'}>
+						<Text className={clsx(styles.names_text, styles.ricky)}>
 							Riccardo
 						</Text>
 					</div>
