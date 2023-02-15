@@ -10,7 +10,7 @@ export default function Invito() {
 		<div className={styles.card_container}>
 			<InvitationTop className={clsx(styles.leaves, styles.top)} />
 			<div className={styles.card}>
-				<Grid gap={1} autoFlow='row dense' className={styles['card_text-container']}>
+			{	<Grid gap={1} autoFlow='row dense' className={styles['card_text-container']}>
 					<Text className={styles.plain_text} align={'center'}>
 						Siete invitati al matrimonio
 					</Text>
@@ -30,7 +30,7 @@ export default function Invito() {
 					<Text className={styles.date} align={'center'}>
 						30.06.2023
 					</Text>
-				</Grid>
+				</Grid>}
 			</div>
 
 			<InvitationBottom className={clsx(styles.leaves, styles.bottom)} />
