@@ -1,63 +1,83 @@
-@import './../../styles/mixins.scss';
+@import "./../../styles/mixins.scss";
 
 .card {
-	width: 90%;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
 
-	&_title {
-		margin-top: 1rem;
-		font-family: $fontfamily-fancy;
-		font-size: 4.5rem;
-		line-height: 4rem;
-	}
+  &_title {
+    margin-top: 1rem;
+    font-family: $fontfamily-fancy;
+    font-size: 4.5rem;
+    line-height: 4rem;
+  }
 
-	&_text {
-		font-family: $fontfamily-base;
-		font-size: 1rem;
-		text-align: center;
-	}
+  &_text {
+    font-family: $fontfamily-base;
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 .pseudo_card::before {
-	content: url('./../images/leaves/menutop.svg');
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	top: 32%;
-	right: 27%;
-	z-index: 0;
+  content: url("./../images/leaves/menutop.svg");
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 32%;
+  right: 27%;
+  z-index: 0;
 }
 
 .pseudo_card::after {
-	content: url('./../images/leaves/menubottom.svg');
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	bottom: -39%;
-	left: 31%;
-	z-index: 0;
+  content: url("./../images/leaves/menubottom.svg");
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: -39%;
+  left: 31%;
+  z-index: 0;
 }
 
 .leave {
-	position: absolute;
-	z-index: 1;
+  position: absolute;
+  z-index: 1;
 
-	&_top {
-		@extend .leave;
-		top: 0;
-		right: -90px;
-	}
+  &_top {
+    @extend .leave;
+    top: 0;
+    right: -90px;
+  }
 
-	&_bottom {
-		@extend .leave;
-		bottom: 0%;
-		left: -22%;
-	}
+  &_bottom {
+    @extend .leave;
+    bottom: 0%;
+    left: -22%;
+  }
 }
 
 .place {
-	text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+@media (min-width: 426px) {
+  .card {
+    width: 60%;
+    gap: 2rem;
+
+    &_title {
+      margin-top: 1rem;
+      font-family: $fontfamily-fancy;
+      font-size: 4.5rem;
+      line-height: 4rem;
+    }
+
+    &_text {
+      font-family: $fontfamily-base;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
 }

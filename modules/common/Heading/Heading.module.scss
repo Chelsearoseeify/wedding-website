@@ -1,46 +1,49 @@
-@import './../../../styles/mixins.scss';
-
-@media screen and (min-width: 400px) {
-	.heading {
-		font-family: $fontfamily-heading;
-		padding: 2rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		max-width: 40rem;
-		text-align: center;
-		margin: auto;
-		margin-bottom: 2rem;
-
-		&_title {
-			font-size: 2.5rem;
-		}
-
-		&_subtitle {
-			font-size: 1.2rem;
-		}
-	}
-}
+@import "./../../../styles/mixins.scss";
 
 .heading {
-	padding: $base-space;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 40rem;
-	text-align: center;
-	margin: auto;
-	margin-top: 1rem;
+  padding: $base-space;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
 
-	&_title {
-		font-family: $fontfamily-heading;
-		font-size: 1.5rem;
-	}
+  &_title {
+    font-family: $fontfamily-heading;
+    font-size: 1.5rem;
+  }
 
-	&_subtitle {
-		font-family: $fontfamily-base;
-		margin-top: 0.4rem;
-		font-size: 1rem;
-		opacity: 0.8;
-	}
+  &_subtitle {
+    font-family: $fontfamily-base;
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 426px) {
+  .heading {
+    padding: $base-space;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem;
+
+    &_title {
+      font-family: $fontfamily-heading;
+      font-size: 2.5rem;
+    }
+
+    &_subtitle {
+      font-family: $fontfamily-base;
+      margin-top: 0.4rem;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+  }
 }
