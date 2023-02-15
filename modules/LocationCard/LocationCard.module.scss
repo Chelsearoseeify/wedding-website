@@ -8,8 +8,10 @@
 	position: relative;
 
 	&_title {
+		margin-top: 1rem;
 		font-family: $fontfamily-fancy;
-		font-size: 3rem;
+		font-size: 4.5rem;
+		line-height: 4rem;
 	}
 
 	&_text {

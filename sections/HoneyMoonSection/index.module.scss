@@ -1,22 +1,22 @@
 @import './../../styles/mixins.scss';
 
 .card {
-	width: 450px;
+	width: 90%;
 	text-align: center;
-	margin-right: -3rem;
 	z-index: 2;
 }
 
 .lama {
-	background-image: url('./../../public/peru-2.jpg');
+	background-image: url('./../../public/lemurs.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 27rem;
-	width: 48rem;
+	height: 12rem;
+	margin-bottom: 1rem;
 }
 
 .iban_container {
 	border-radius: 2rem;
+	font-size: 0.9rem;
 	background-color: $nav-background-color;
 	padding: 0rem 0rem 0rem 1rem;
 	margin: auto;

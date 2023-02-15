@@ -7,7 +7,13 @@ export default function ConfirmSection() {
 		<section classNames={styles.container}>
 			<Heading
 				title='Conferma partecipazione'
-				subtitle={'Aggiungi qui sotto i nomi di tutti gli invitati che parteciperanno e le loro preferenze alimentari'}
+				subtitle={
+					<>
+						Aggiungi qui sotto i nomi di tutti gli invitati che parteciperanno e le loro preferenze alimentari.
+						<br />
+						<strong>Conferma entro il 15 Aprile</strong>
+					</>
+				}
 			/>
 			<Confirm />
 		</section>

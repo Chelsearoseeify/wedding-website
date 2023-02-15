@@ -103,7 +103,7 @@
 
 	&_text-container {
 		position: relative;
-		padding: 7rem 1.5rem;
+		padding: 7rem 2rem;
 		border: 2px solid rgba(166, 136, 17, 0.293);
 	}
 }
@@ -141,14 +141,14 @@
 
 .and {
 	position: absolute;
-	left: 25%;
-	right: 40%;
-	top: 35%;
+	left: 50%;
+	top: 55%;
 	bottom: 30%;
-	font-family: $fontfamily-fancy;
+	transform: translateX(-50%) translateY(-50%);
+	font-family: AdoraBouton;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 9rem;
+	font-size: 40vw;
 	line-height: 309.5%;
 	display: flex;
 	align-items: center;
@@ -157,7 +157,7 @@
 
 .names {
 	&_text {
-		font-size: 70px;
+		font-size: 32vw;
 		line-height: 10rem;
 		width: 100%;
 		color: $text-color-base;
