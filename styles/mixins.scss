@@ -4,6 +4,11 @@
 }
 
 @font-face {
+	font-family: Southland;
+	src: url(custom-fonts/Southland.ttf);
+}
+
+@font-face {
 	font-family: AdoraBouton;
 	src: url(custom-fonts/adorabouton.ttf);
 }
@@ -16,7 +21,7 @@
 $fontsize-base: 16px;
 $fontfamily-base: MuseoSans;
 
-$fontfamily-fancy: AdoraBouton;
+$fontfamily-fancy: Southland;
 
 $fontfamily-heading: Didot;
 

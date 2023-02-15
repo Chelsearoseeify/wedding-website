@@ -20,7 +20,7 @@ export default function Home() {
 		{
 			id: 'honeymoon',
 			name: 'Luna di Miele',
-			section: <></> /* <HoneyMoonSection /> */,
+			section: <HoneyMoonSection />,
 		},
 		{
 			id: 'confirmation',
