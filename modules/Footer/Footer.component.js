@@ -4,7 +4,10 @@ import { useState } from "react";
 import styles from "./Footer.module.scss";
 import { Mail } from "./../images/icons/Mail";
 import { Instagram } from "./../images/icons/Instagram";
-import { Phone } from "./../images/icons/Phone";
+import { PhoneK } from "../images/icons/PhoneK";
+import { PhoneR } from "../images/icons/PhoneR";
+
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function Footer({
   items,
@@ -25,7 +28,9 @@ export default function Footer({
         justify="space-between"
       >
         <div>Domande?</div>{" "}
-        <div onClick={() => window.open("mailto:email@example.com")}>
+        <div
+          onClick={() => window.open("mailto:matrimonio.kellyriky@gmail.com")}
+        >
           Scrivici un'email
         </div>
       </Flex>
@@ -49,12 +54,21 @@ export default function Footer({
           </a>
         ))}
       </Flex>
-      <Flex align={"center"} justify="center" gap={7}>
+      <Flex align={"center"} justify="center" gap={7} marginBottom={2}>
+        <CopyToClipboard
+          text={"3289218680"}
+          onCopy={() => console.log("copied")}
+        >
+          <PhoneK />
+        </CopyToClipboard>
         <Mail />
-        <Instagram />
-        <Phone />
+        <CopyToClipboard
+          text={"3407423565"}
+          onCopy={() => console.log("copied")}
+        >
+          <PhoneR />
+        </CopyToClipboard>
       </Flex>
-      <br />
     </Flex>
   );
 }

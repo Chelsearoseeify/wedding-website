@@ -32,7 +32,9 @@ export default function Location({ type, place, time, address, city }) {
           className={styles.card_text}
         >
           <Text className={styles.place}>{place}</Text>
-          <Text className={styles.time}>ore {time}</Text>
+          <Text className={styles.time}>
+            <b>ore {time}</b>
+          </Text>
           <div>
             <Text className={styles.address}>{address}</Text>
             <Text className={styles.city}>{city}</Text>

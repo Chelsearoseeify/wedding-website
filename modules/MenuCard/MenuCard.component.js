@@ -68,6 +68,7 @@ export default function Menu() {
       <div className={styles.pseudo_card_top} />
       <Card className={styles.card}>
         <Flex alignItems="center" flexDirection={"column"}>
+          <br />
           <Text className={styles.card_title} align={"center"}>
             Antipasti
           </Text>
