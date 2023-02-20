@@ -7,7 +7,7 @@ import { Text, Flex, IconButton } from "@chakra-ui/react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function HoneyMoonSection() {
-  const iban = "IT47E0300203280157729629718";
+  const iban = "IT65N0305801604100571094887";
 
   return (
     <section classNames={styles.container}>

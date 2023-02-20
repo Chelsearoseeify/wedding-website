@@ -6,10 +6,12 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
+  gap: 2rem;
 
   &_title {
     font-family: $fontfamily-fancy;
     font-size: 4.5rem;
+    line-height: 4rem;
   }
 
   &_text {
