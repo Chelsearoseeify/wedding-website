@@ -141,7 +141,7 @@
 
       &_text-container {
         padding: 7rem 1.5rem;
-        border-width: 5px;
+        border-width: 4px;
       }
     }
 
@@ -217,7 +217,7 @@
   }
 
   .and {
-    font-size: 20vw;
+    font-size: 25vw;
     line-height: 309.5%;
   }
 
@@ -225,6 +225,59 @@
     &_text {
       font-size: 10vw;
       line-height: 28vh;
+    }
+  }
+
+  @media (min-width: 426px) {
+    .card {
+      height: 85%;
+      width: 90%;
+
+      &_container {
+        height: 75vh;
+        width: 90%;
+      }
+
+      &_text-container {
+        padding: 1rem 2rem;
+      }
+    }
+
+    .leaves {
+      height: 37.5%;
+      transform: rotate(-90deg);
+    }
+
+    .bottom {
+      top: 31.3%;
+      right: -12vh;
+    }
+
+    .top {
+      top: 31.3%;
+      left: -11.5vh;
+    }
+
+    .date {
+      font-size: 6vh;
+    }
+    .plain_text {
+      font-size: 3vh;
+    }
+
+    .and {
+      font-size: 15vw;
+      line-height: 309.5%;
+    }
+
+    .names {
+      &_text {
+        font-size: 14vw;
+        line-height: 28vh;
+      }
+      &_container {
+        padding: 0rem 4rem;
+      }
     }
   }
 }

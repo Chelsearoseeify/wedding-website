@@ -1,33 +1,35 @@
-@import './../../styles/mixins.scss';
+@import "./../../styles/mixins.scss";
 
 .card {
-	width: 90%;
-	text-align: center;
-	z-index: 2;
+  width: 90%;
+  text-align: center;
+  z-index: 2;
 }
 
-.lama {
-	background-image: url('./../../public/lemurs.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 12rem;
-	margin-bottom: 1rem;
+.image_container {
+  padding: 1rem;
 }
 
 .iban_container {
-	border-radius: 2rem;
-	font-size: 0.9rem;
-	background-color: $nav-background-color;
-	padding: 0rem 0rem 0rem 1rem;
-	margin: auto;
-	color: #ffffffb3;
-	font-weight: bolder;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  background-color: $nav-background-color;
+  padding: 0rem 0rem 0rem 1rem;
+  margin: auto;
+  color: #ffffffb3;
+  font-weight: bolder;
 }
 
 .copy_iban {
-	background-color: transparent !important;
+  background-color: transparent !important;
 
-	&:hover {
-		color: white;
-	}
+  &:hover {
+    color: white;
+  }
+}
+
+@media (min-width: 426px) {
+  .card {
+    width: 60%;
+  }
 }

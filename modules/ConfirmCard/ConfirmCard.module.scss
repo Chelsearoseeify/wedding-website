@@ -1,181 +1,133 @@
-@import './../../styles/mixins.scss';
-@media screen and (min-width: 400px) {
-	.card {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-		position: relative;
-		z-index: 1;
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-
-		&_title {
-			font-family: $fontfamily-fancy;
-			font-size: 3rem;
-		}
-
-		&_text {
-			font-family: $fontfamily-base;
-			font-size: 1rem;
-		}
-	}
-	.pseudo_card {
-		&_top {
-			position: relative;
-
-			&::before {
-				content: url('./../images/leaves/menutop.svg');
-				position: absolute;
-				width: 200px;
-				height: 200px;
-				top: 0rem;
-				right: -9rem;
-				z-index: 0;
-			}
-		}
-
-		&_bottom {
-			position: relative;
-
-			&::before {
-				content: url('./../images/leaves/menubottom.svg');
-				position: absolute;
-				width: 200px;
-				height: 200px;
-				bottom: 0rem;
-				left: -5.5rem;
-				z-index: 0;
-			}
-		}
-	}
-
-	.button {
-		color: white;
-		background: $nav-background-color !important;
-		border-radius: 2em !important;
-		margin: auto;
-
-		&:hover {
-			background-color: lighten($color: $nav-background-color, $amount: 5%) !important;
-		}
-
-		&:active {
-			background-color: darken($color: $nav-background-color, $amount: 5%) !important;
-		}
-	}
-
-	.icon_button {
-		margin: 0 auto 8px auto;
-	}
-
-	.input {
-		&:focus-visible {
-			border-color: $nav-background-color !important;
-			box-shadow: 0 0 0 1px $nav-background-color !important;
-		}
-	}
-
-	.alert {
-		--alert-bg: $card-background-color !important;
-	}
-
-	.success_icon {
-		color: $nav-background-color !important;
-	}
-}
+@import "./../../styles/mixins.scss";
 
 .card {
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
-	position: relative;
-	z-index: 1;
-	padding: 2rem 1rem;
-	width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+  width: 20rem;
 
-	&_title {
-		font-family: $fontfamily-fancy;
-		font-size: 3rem;
-	}
+  &_title {
+    font-family: $fontfamily-fancy;
+    font-size: 3rem;
+  }
 
-	&_text {
-		font-family: $fontfamily-base;
-		font-size: 1rem;
-	}
+  &_text {
+    font-family: $fontfamily-base;
+    font-size: 1rem;
+  }
 }
 .pseudo_card {
-	&_top {
-		position: relative;
+  &_top {
+    position: relative;
 
-		&::before {
-			content: url('./../images/leaves/menutop.svg');
-			position: absolute;
+    &::before {
+      content: url("./../images/leaves/menutop.svg");
+      position: absolute;
 
-			top: 0rem;
-			right: 0;
-			z-index: 0;
-		}
-	}
+      top: 0rem;
+      right: 0;
+      z-index: 0;
+    }
+  }
 
-	&_bottom {
-		position: relative;
+  &_bottom {
+    position: relative;
 
-		&::before {
-			content: url('./../images/leaves/menubottom.svg');
-			position: absolute;
-			width: 200px;
-			height: 200px;
-			bottom: 0rem;
-			left: -5.5rem;
-			z-index: 0;
-		}
-	}
+    &::before {
+      content: url("./../images/leaves/menubottom.svg");
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      bottom: 0rem;
+      left: -5.5rem;
+      z-index: 0;
+    }
+  }
 }
 
 .form_container {
-	border-radius: 0.5rem;
-	border: 1px dashed rgba(166, 136, 17, 0.293);
-	padding: 1rem;
-	position: relative;
+  border-radius: 0.5rem;
+  border: 1px dashed rgba(166, 136, 17, 0.293);
+  padding: 1rem;
+  position: relative;
 }
 .button {
-	color: white;
-	background: $nav-background-color !important;
-	border-radius: 2em !important;
-	margin: auto;
+  color: white;
+  background: $nav-background-color !important;
+  border-radius: 2em !important;
+  margin: auto;
 
-	&:hover {
-		background-color: lighten($color: $nav-background-color, $amount: 5%) !important;
-	}
+  &:hover {
+    background-color: lighten(
+      $color: $nav-background-color,
+      $amount: 5%
+    ) !important;
+  }
 
-	&:active {
-		background-color: darken($color: $nav-background-color, $amount: 5%) !important;
-	}
+  &:active {
+    background-color: darken(
+      $color: $nav-background-color,
+      $amount: 5%
+    ) !important;
+  }
 }
 
 .icon_button {
-	margin: 0 auto 8px auto;
-	position: absolute !important;
-	top: -8px;
-	right: -8px;
+  margin: 0 auto 8px auto;
+  position: absolute !important;
+  top: -8px;
+  right: -8px;
 }
 
 .input {
-	&:focus-visible {
-		border-color: $nav-background-color !important;
-		box-shadow: 0 0 0 1px $nav-background-color !important;
-	}
+  &:focus-visible {
+    border-color: $nav-background-color !important;
+    box-shadow: 0 0 0 1px $nav-background-color !important;
+  }
 }
 
 .alert {
-	--alert-bg: $card-background-color !important;
+  --alert-bg: $card-background-color !important;
 }
 
 .success_icon {
-	color: $nav-background-color !important;
+  color: $nav-background-color !important;
 }
 
 .label {
-	font-family: $fontfamily-heading;
-	margin-bottom: -8px;
+  font-family: $fontfamily-heading;
+}
+
+@media screen and (min-width: 400px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 80%;
+
+    &_title {
+      font-family: $fontfamily-fancy;
+      font-size: 3rem;
+    }
+
+    &_text {
+      font-family: $fontfamily-base;
+      font-size: 1rem;
+    }
+  }
+
+  .button {
+    margin: auto;
+  }
+
+  .icon_button {
+    margin: 0 auto 8px auto;
+  }
 }
