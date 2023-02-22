@@ -6,12 +6,8 @@
   z-index: 2;
 }
 
-.lama {
-  background-image: url("./../../public/lemurs.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 12rem;
-  margin-bottom: 1rem;
+.image_container {
+  padding: 1rem;
 }
 
 .iban_container {

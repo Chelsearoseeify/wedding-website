@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import Heading from "./../../modules/common/Heading/Heading.component";
-import Timeline from "../../modules/Timeline/Timeline.component";
+import Timeline from "../../modules/TimelineNew/Timeline.component";
 
 export default function OurStorySection() {
   return (
@@ -8,7 +8,7 @@ export default function OurStorySection() {
       <Heading
         title={"La Nostra Storia"}
         subtitle={
-          "Per tutti gli imbucati, ecco due informazioni per fare conversazione."
+          "Probabilmente per scrutare il futuro, occorre ricordare il passato."
         }
       />
       <Timeline />
