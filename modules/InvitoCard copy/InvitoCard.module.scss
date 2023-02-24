@@ -1,0 +1,341 @@
+@import "./../../styles/mixins.scss";
+
+.card {
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: $card-background-color;
+    box-shadow: 2px 2px 16px #cec5ba;
+  }
+
+  &_text-container {
+    position: relative;
+    border: 2px solid rgba(166, 136, 17, 0.293);
+  }
+}
+
+.leaves {
+  position: absolute;
+  aspect-ratio: 2;
+  z-index: 2;
+}
+
+.bottom {
+  bottom: -2px;
+  right: 0;
+  left: 0;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.date {
+  font-weight: 250;
+  color: $text-color-base;
+}
+.plain_text {
+  font-weight: 250;
+  text-transform: uppercase;
+  color: #67762e;
+}
+
+.and {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  bottom: 30%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: AdoraBouton;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  color: rgba(103, 118, 46, 0.1);
+}
+
+.names {
+  &_text {
+    width: 100%;
+    color: $text-color-base;
+    text-align: center;
+  }
+  &_container {
+    font-family: $fontfamily-fancy;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (orientation: portrait) {
+  .card {
+    width: 90%;
+
+    &_container {
+      height: 100vh;
+    }
+
+    &_text-container {
+      padding: 7rem 1.5rem;
+      width: 100%;
+    }
+  }
+
+  .leaves {
+    width: 100vw;
+  }
+
+  .bottom {
+    bottom: -2px;
+    right: 0;
+    left: 0;
+  }
+
+  .top {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .date {
+    font-size: 10vw;
+  }
+  .plain_text {
+    font-size: 5vw;
+  }
+
+  .and {
+    font-size: 40vw;
+    line-height: 309.5%;
+  }
+
+  .names {
+    &_text {
+      font-size: 32vw;
+      line-height: 10rem;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 426px) {
+    .card {
+      width: 90%;
+
+      &_container {
+        height: 90vh;
+        width: 80%;
+      }
+
+      &_text-container {
+        padding: 7rem 1.5rem;
+        border-width: 4px;
+      }
+    }
+
+    .leaves {
+      width: 80%;
+    }
+
+    .bottom {
+      bottom: 4.7%;
+      left: 10%;
+    }
+
+    .top {
+      top: 5%;
+      left: 10%;
+    }
+
+    .date {
+      font-size: 5vw;
+    }
+    .plain_text {
+      font-size: 2.5vw;
+    }
+
+    .and {
+      font-size: 25vw;
+      line-height: 309.5%;
+    }
+
+    .names {
+      &_text {
+        font-size: 23vw;
+        line-height: 15vh;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .card {
+    width: 90%;
+
+    &_container {
+      height: 100vh;
+      width: 100%;
+    }
+
+    &_text-container {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .leaves {
+    height: 68vh;
+    transform: rotate(-90deg);
+  }
+
+  .bottom {
+    top: 0;
+    right: -34vh;
+  }
+
+  .top {
+    top: 0;
+    left: -34vh;
+  }
+
+  .date {
+    font-size: 6vw;
+  }
+  .plain_text {
+    font-size: 3vw;
+  }
+
+  .and {
+    font-size: 25vw;
+    line-height: 309.5%;
+  }
+
+  .names {
+    &_text {
+      font-size: 10vw;
+      line-height: 28vh;
+    }
+  }
+
+  @media (min-width: 426px) {
+    .card {
+      height: 85%;
+      width: 90%;
+
+      &_container {
+        height: 75vh;
+        width: 90%;
+      }
+
+      &_text-container {
+        padding: 1rem 2rem;
+      }
+    }
+
+    .leaves {
+      height: 37.5%;
+      transform: rotate(-90deg);
+    }
+
+    .bottom {
+      top: 31.3%;
+      right: -12vh;
+    }
+
+    .top {
+      top: 31.3%;
+      left: -11.5vh;
+    }
+
+    .date {
+      font-size: 6vh;
+    }
+    .plain_text {
+      font-size: 3vh;
+    }
+
+    .and {
+      font-size: 15vw;
+      line-height: 309.5%;
+    }
+
+    .names {
+      &_text {
+        font-size: 14vw;
+        line-height: 28vh;
+      }
+      &_container {
+        padding: 0rem 4rem;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card {
+      height: 85%;
+      width: 90%;
+
+      &_container {
+        height: 75vh;
+        width: 90%;
+
+        max-width: 70rem;
+      }
+
+      &_text-container {
+        padding: 1rem 2rem;
+        width: 100%;
+      }
+    }
+
+    .leaves {
+      height: 37.5%;
+      transform: rotate(-90deg);
+    }
+
+    .bottom {
+      top: 31.3%;
+      left: 69vw;
+    }
+
+    .top {
+      top: 31.3%;
+      left: -4vw;
+    }
+
+    .date {
+      font-size: 6vh;
+    }
+    .plain_text {
+      font-size: 3vh;
+    }
+
+    .and {
+      font-size: 10vw;
+      line-height: 309.5%;
+    }
+
+    .names {
+      &_text {
+        font-size: 10vw;
+        line-height: 28vh;
+      }
+      &_container {
+        padding: 0rem 4rem;
+        flex-direction: row;
+        gap: 4rem;
+      }
+    }
+  }
+}

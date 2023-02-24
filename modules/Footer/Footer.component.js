@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, IconButton } from "@chakra-ui/react";
 import { useState } from "react";
 
 import styles from "./Footer.module.scss";
@@ -59,14 +59,29 @@ export default function Footer({
           text={"3289218680"}
           onCopy={() => console.log("copied")}
         >
-          <PhoneK />
+          <IconButton
+            variant="ghost"
+            aria-label="Cell Kelly"
+            icon={<PhoneK />}
+            className={styles.footer_button}
+          />
         </CopyToClipboard>
-        <Mail />
+        <IconButton
+          variant="ghost"
+          onClick={() => window.open("mailto:matrimonio.kellyriky@gmail.com")}
+          className={styles.footer_button}
+          icon={<Mail />}
+        />
         <CopyToClipboard
           text={"3407423565"}
           onCopy={() => console.log("copied")}
         >
-          <PhoneR />
+          <IconButton
+            variant="ghost"
+            aria-label="Cell Riky"
+            icon={<PhoneR />}
+            className={styles.footer_button}
+          />
         </CopyToClipboard>
       </Flex>
     </Flex>

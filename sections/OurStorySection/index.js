@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import Heading from "./../../modules/common/Heading/Heading.component";
-import Timeline from "../../modules/TimelineNew/Timeline.component";
+import Timeline from "../../modules/Timeline/Timeline.component";
 
 export default function OurStorySection() {
   return (

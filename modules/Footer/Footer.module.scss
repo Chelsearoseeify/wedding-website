@@ -1,16 +1,24 @@
-@import './../../styles/mixins.scss';
+@import "./../../styles/mixins.scss";
 
 .footer {
-	background-color: $nav-background-color;
-	padding: 1rem 2.5rem;
-	color: white;
-	font-family: $fontfamily-base;
-	z-index: 5;
-	margin-top: 4rem;
-	box-shadow: 1px -4px 20px 1px #cec5ba;
+  background-color: $nav-background-color;
+  padding: 1rem 2.5rem;
+  color: white;
+  font-family: $fontfamily-base;
+  z-index: 5;
+  margin-top: 4rem;
+  box-shadow: 1px -4px 20px 1px #cec5ba;
 
-	&_link {
-		width: 100%;
-		font-family: $fontfamily-heading;
-	}
+  &_link {
+    width: 100%;
+    font-family: $fontfamily-heading;
+  }
+
+  &_button:hover,
+  &_button:active {
+    background-color: darken(
+      $color: $nav-background-color,
+      $amount: 5
+    ) !important;
+  }
 }

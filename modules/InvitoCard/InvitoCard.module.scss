@@ -1,56 +1,70 @@
 @import "./../../styles/mixins.scss";
 
-.card {
-  height: fit-content;
-  position: relative;
+.card_container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 !important;
+
+  max-width: 43rem;
+  max-height: 64rem;
+}
+
+.leave_container {
+  height: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
+.top {
+  background-image: url("./top.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+.bottom {
+  background-image: url("./bottom.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position-y: bottom;
+}
+
+.text_container {
+  flex: 1;
+  margin: -8vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  &_container {
+  &-border {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    border: 2px solid rgba(166, 136, 17, 0.293);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    background-color: $card-background-color;
-    box-shadow: 2px 2px 16px #cec5ba;
   }
-
-  &_text-container {
-    position: relative;
-    border: 2px solid rgba(166, 136, 17, 0.293);
-  }
-}
-
-.leaves {
-  position: absolute;
-  aspect-ratio: 2;
-  z-index: 2;
-}
-
-.bottom {
-  bottom: -2px;
-  right: 0;
-  left: 0;
-}
-
-.top {
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .date {
+  font-size: 2rem;
   font-weight: 250;
   color: $text-color-base;
 }
 .plain_text {
+  font-size: 1rem;
   font-weight: 250;
   text-transform: uppercase;
   color: #67762e;
 }
 
 .and {
+  font-size: 8rem;
+  line-height: 309.5%;
   position: absolute;
   left: 50%;
   top: 55%;
@@ -66,6 +80,8 @@
 
 .names {
   &_text {
+    font-size: 7rem;
+    line-height: 10rem;
     width: 100%;
     color: $text-color-base;
     text-align: center;
@@ -80,203 +96,80 @@
   }
 }
 
-@media (orientation: portrait) {
-  .card {
-    width: 90%;
+@media (orientation: landscape) {
+  .card_container {
+    flex-direction: row;
 
-    &_container {
-      height: 100vh;
-    }
-
-    &_text-container {
-      padding: 7rem 1.5rem;
-      width: 100%;
-    }
+    max-height: 43rem;
+    max-width: 64rem;
   }
 
-  .leaves {
-    width: 100vw;
-  }
-
-  .bottom {
-    bottom: -2px;
-    right: 0;
-    left: 0;
+  .leave_container {
+    width: 20%;
+    height: 100%;
   }
 
   .top {
-    top: 0;
-    left: 0;
-    right: 0;
+    background-image: url("./left.svg");
+    background-repeat: repeat-y;
   }
 
-  .date {
-    font-size: 10vw;
+  .bottom {
+    background-image: url("./right.svg");
+    background-repeat: repeat-y;
+    background-position-x: right;
   }
-  .plain_text {
-    font-size: 5vw;
-  }
+  .text_container {
+    margin: 0 -8vw;
 
-  .and {
-    font-size: 40vw;
-    line-height: 309.5%;
+    &-border {
+      width: 100%;
+      height: 90%;
+    }
   }
 
   .names {
     &_text {
-      font-size: 32vw;
+      font-size: 7rem;
       line-height: 10rem;
       width: 100%;
+      color: $text-color-base;
+      text-align: center;
     }
-  }
-
-  @media (min-width: 426px) {
-    .card {
-      width: 90%;
-
-      &_container {
-        height: 90vh;
-        width: 80%;
-      }
-
-      &_text-container {
-        padding: 7rem 1.5rem;
-        border-width: 4px;
-      }
-    }
-
-    .leaves {
-      width: 80%;
-    }
-
-    .bottom {
-      bottom: 4.7%;
-      left: 10%;
-    }
-
-    .top {
-      top: 5%;
-      left: 10%;
-    }
-
-    .date {
-      font-size: 5vw;
-    }
-    .plain_text {
-      font-size: 2.5vw;
-    }
-
-    .and {
-      font-size: 25vw;
-      line-height: 309.5%;
-    }
-
-    .names {
-      &_text {
-        font-size: 23vw;
-        line-height: 15vh;
-      }
-    }
-  }
-}
-
-@media (orientation: landscape) {
-  .card {
-    width: 90%;
-
     &_container {
-      height: 100vh;
-      width: 100%;
-    }
-
-    &_text-container {
-      padding: 1rem 2rem;
-    }
-  }
-
-  .leaves {
-    height: 68vh;
-    transform: rotate(-90deg);
-  }
-
-  .bottom {
-    top: 0;
-    right: -34vh;
-  }
-
-  .top {
-    top: 0;
-    left: -34vh;
-  }
-
-  .date {
-    font-size: 6vw;
-  }
-  .plain_text {
-    font-size: 3vw;
-  }
-
-  .and {
-    font-size: 25vw;
-    line-height: 309.5%;
-  }
-
-  .names {
-    &_text {
-      font-size: 10vw;
-      line-height: 28vh;
+      font-family: $fontfamily-fancy;
+      position: relative;
+      gap: 8vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
   }
 
-  @media (min-width: 426px) {
-    .card {
-      height: 85%;
-      width: 90%;
-
-      &_container {
-        height: 75vh;
-        width: 90%;
-      }
-
-      &_text-container {
-        padding: 1rem 2rem;
+  @media (min-width: 1200px) {
+    .card_container {
+      max-width: 60rem;
+      max-height: 32rem;
+    }
+    .text_container {
+      &-border {
+        gap: 1.4rem;
       }
     }
-
-    .leaves {
-      height: 37.5%;
-      transform: rotate(-90deg);
-    }
-
-    .bottom {
-      top: 31.3%;
-      right: -12vh;
-    }
-
-    .top {
-      top: 31.3%;
-      left: -11.5vh;
-    }
-
     .date {
-      font-size: 6vh;
+      font-size: 2.2rem;
     }
     .plain_text {
-      font-size: 3vh;
+      font-size: 1.2rem;
     }
-
-    .and {
-      font-size: 15vw;
-      line-height: 309.5%;
-    }
-
     .names {
       &_text {
-        font-size: 14vw;
-        line-height: 28vh;
-      }
-      &_container {
-        padding: 0rem 4rem;
+        font-size: 10rem;
+        line-height: 10rem;
+        width: 100%;
+        color: $text-color-base;
+        text-align: center;
       }
     }
   }
