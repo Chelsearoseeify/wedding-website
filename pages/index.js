@@ -10,6 +10,7 @@ import ConfirmSection from "./../sections/ConfirmSection/index";
 import OurStorySection from "./../sections/OurStorySection/index";
 import MenuFAB from "../modules/common/MenuFAB/MenuFAB.component";
 import Footer from "./../modules/Footer/Footer.component";
+import { useWindowSize } from "../modules/common/useWindowSize";
 
 export default function Home() {
   const menuItems = [
@@ -30,6 +31,9 @@ export default function Home() {
     { id: "contacts", name: "Contatti", section: <></> },
   ];
   const [selectedMenuItem, setSelectedMenuItem] = useState("La Nostra Storia");
+
+  const size = useWindowSize();
+
   return (
     <>
       <div className={styles.base}>
@@ -38,8 +42,14 @@ export default function Home() {
           selectedMenuItem={selectedMenuItem}
           setSelectedMenuItem={setSelectedMenuItem}
         />
-        {/* 	<Navbar items={menuItems} selectedMenuItem={selectedMenuItem} setSelectedMenuItem={setSelectedMenuItem} />
-         */}
+        {/* <Navbar
+          items={menuItems}
+          selectedMenuItem={selectedMenuItem}
+          setSelectedMenuItem={setSelectedMenuItem}
+        /> */}
+        {/*   <div style={{ fontSize: "2rem" }}>
+          {size.width}px / {size.height}px
+        </div> */}
 
         {menuItems.map((item) => {
           return (

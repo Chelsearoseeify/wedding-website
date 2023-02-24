@@ -1,32 +1,36 @@
-@import './../../styles/mixins.scss';
+@import "./../../styles/mixins.scss";
 
 $sidebar-width: 50px;
 
 .nav {
-	gap: 2rem;
-	width: 100%;
-	height: $sidebar-width;
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	text-transform: uppercase;
-	color: white;
-	font-family: $fontfamily-base;
-	letter-spacing: 4%;
+  gap: 2rem;
+  width: 100%;
+  height: $sidebar-width;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: $fontfamily-base;
+  letter-spacing: 4%;
+  background-color: $nav-background-color;
+  position: fixed;
+  z-index: 20;
 
-	&_item {
-		position: relative;
-		opacity: 0.5;
+  box-shadow: 1px -4px 20px 1px #cec5ba;
 
-		&:hover {
-			cursor: pointer;
-			opacity: 0.8;
-		}
+  &_item {
+    position: relative;
+    opacity: 0.5;
 
-		&--selected,
-		&:active {
-			opacity: 1;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &--selected,
+    &:active {
+      opacity: 1;
+    }
+  }
 }

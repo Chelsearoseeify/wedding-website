@@ -7,6 +7,7 @@
   position: relative;
   z-index: 1;
   gap: 2rem;
+  max-width: 40rem;
 
   &_title {
     font-family: $fontfamily-fancy;
@@ -34,15 +35,13 @@
 .pseudo_card {
   &_top {
     position: relative;
-
+    /* 
     &::before {
-      content: url("./../images/leaves/menutop.svg");
-      position: absolute;
-
-      top: 0rem;
+      content: url("./angle.svg");
+      top: 0;
       right: 0;
-      z-index: 0;
-    }
+      position: absolute;
+    } */
   }
 
   &_bottom {

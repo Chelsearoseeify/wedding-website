@@ -7,6 +7,7 @@
   position: relative;
   overflow: hidden;
   font-family: $fontfamily-base;
+  max-width: 60rem;
 }
 
 .container:before {
@@ -52,7 +53,7 @@
   border: 2px solid #f5f7fa;
   background: #8bac12;
   margin-top: 10px;
-  z-index: 9999;
+  z-index: 5;
 }
 
 .timeline-content {
@@ -62,8 +63,8 @@
 
 .timeline-content h3 {
   margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   font-family: $fontfamily-heading;
 }
@@ -95,5 +96,11 @@
   .timeline-block-left {
     float: none;
     direction: ltr;
+  }
+
+  .timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
   }
 }

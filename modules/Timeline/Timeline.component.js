@@ -9,25 +9,67 @@ export default function Timeline() {
       index: 1,
       title: "Primi Incontri",
       date: { day_month: "OTTOBRE", year: "2014" },
-      text: "Ogni mattina, alle 7.18, ci davamo appuntamento sul binario del suburbano S6 per affrontare vicini vicini il tragitto che ci avrebbe scortato in università.",
+      text: (
+        <p style={{ textAlign: "justify" }}>
+          "Ogni mattina, alle 7.18, ci davamo appuntamento sul binario del
+          suburbano S6 per affrontare vicini vicini il tragitto che ci avrebbe
+          scortato in università."
+        </p>
+      ),
     },
     {
       index: 2,
       title: "Primo Appuntamento",
       date: { day_month: "GIUGNO", year: "2015" },
-      text: "Dopo un indelebile Viaggio della Memoria, la primavera fece sbocciare il nostro amore. \nIl primo vero appuntamento non poté che essere una gita in montagna, dove Riccardo, con doti da scarpinatore, mise a dura prova le gambe della sua bella, che non cedette facilmente!",
+      text: (
+        <>
+          <p style={{ textAlign: "justify" }}>
+            Dopo un indelebile Viaggio della Memoria, la primavera fece
+            sbocciare il nostro amore.
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            Il primo vero appuntamento non poté che essere una gita in montagna,
+            dove Riccardo, con doti da scarpinatore, mise a dura prova le gambe
+            della sua bella, che non cedette facilmente!
+          </p>
+        </>
+      ),
     },
     {
       index: 3,
       title: "Andiamo a vivere insieme",
       date: { day_month: "GENNAIO", year: "2019" },
-      text: "Forse l’esigenza pratica, forse il desiderio di crescere insieme ci condussero presto alla scelta di convivere. \nSotto lo sguardo di una Carlotta disorientata, le immense valigie di Riccardo varcarono la soglia della nostra azzurra casa torinese.",
+      text: (
+        <>
+          <p style={{ textAlign: "justify" }}>
+            Forse l’esigenza pratica, forse il desiderio di crescere insieme ci
+            condussero presto alla scelta di convivere.
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            Sotto lo sguardo di una Carlotta disorientata, le immense valigie di
+            Riccardo varcarono la soglia della nostra azzurra casa torinese.
+          </p>
+        </>
+      ),
     },
     {
       index: 4,
       title: "Proposta",
       date: { day_month: "AGOSTO", year: "2022" },
-      text: "E dopo aver oltrepassato di appena qualche metro il valico dell’Età adulta, nel cuore delle Dolomiti, un giovane escursionista emozionato si inginocchiò e chiese alla sua incredula compagna di sposarla. \nCi piace pensare che le testimoni del momento, le montagne, serberanno il ricordo anche per noi.",
+      text: (
+        <>
+          <p style={{ textAlign: "justify" }}>
+            E dopo aver oltrepassato di appena qualche metro il valico dell’Età
+            adulta, nel cuore delle Dolomiti, un giovane escursionista
+            emozionato si inginocchiò e chiese alla sua incredula compagna di
+            sposarla.
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            Ci piace pensare che le testimoni del momento, le montagne,
+            serberanno il ricordo anche per noi.
+          </p>
+        </>
+      ),
     },
     {
       index: 5,
@@ -59,7 +101,7 @@ export default function Timeline() {
             <span style={{ marginTop: "1rem" }}>
               {el.date.day_month} {el.date.year}
             </span>
-            <p style={{ textAlign: "justify" }}>{el.text}</p>
+            {el.text}
           </Flex>
         </div>
       ))}
