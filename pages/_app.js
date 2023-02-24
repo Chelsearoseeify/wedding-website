@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Matrimonio di Carlotta e Riccardo</title>
         <meta name="description" content="30 Giugno 2023" />
-        <meta property="og:image" content="../public/meta.png"></meta>
       </Head>
 
       <Component {...pageProps} />
