@@ -42,7 +42,7 @@ export default function Home() {
           selectedMenuItem={selectedMenuItem}
           setSelectedMenuItem={setSelectedMenuItem}
         />
-        {/* <Navbar
+        {/*   <Navbar
           items={menuItems}
           selectedMenuItem={selectedMenuItem}
           setSelectedMenuItem={setSelectedMenuItem}

@@ -60,10 +60,12 @@ export default function GuestForm({ guest, setGuests }) {
           className={styles.input}
         >
           <option value="none">Nessuna</option>
-          <option value="celiac">Celiaco</option>
-          <option value="lactose_intolerant">Intollerante al lattosio</option>
-          <option value="vegetarian">Vegetariano</option>
-          <option value="vegan">Vegano</option>
+          <option value="celiaco">Celiaco</option>
+          <option value="intollerante_al_lattosio">
+            Intollerante al lattosio
+          </option>
+          <option value="vegetariano">Vegetariano</option>
+          <option value="vegano">Vegano</option>
         </Select>
       </Box>
     </Flex>

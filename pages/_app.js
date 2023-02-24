@@ -8,6 +8,10 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Matrimonio di Carlotta e Riccardo</title>
         <meta name="description" content="30 Giugno 2023" />
+        <meta
+          property="og:image"
+          content="https://www.giardinaggio.org/giardino/alberi-latifolie/la-quercia-albero_NG1.jpg"
+        />
       </Head>
 
       <Component {...pageProps} />
