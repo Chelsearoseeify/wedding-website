@@ -23,6 +23,7 @@ $card-width: 85%;
 }
 .pseudo_card {
   width: $card-width;
+  margin: auto;
   &_top {
     @extend .pseudo_card;
     position: relative;
@@ -45,7 +46,7 @@ $card-width: 85%;
       content: url("./../images/leaves/confirmation/right.svg");
       position: absolute;
       bottom: -4rem;
-      right: -3rem;
+      right: -1rem;
       z-index: 0;
     }
   }

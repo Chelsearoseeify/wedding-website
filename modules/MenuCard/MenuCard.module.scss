@@ -61,8 +61,8 @@ $card-max-width: 40rem;
     &::after {
       content: url("./../images/leaves/menu/right.svg");
       position: absolute;
-      top: 39rem;
-      left: -8.5%;
+      top: 38rem;
+      left: -2rem;
       z-index: 2;
       transform: rotate(180deg);
     }
@@ -96,22 +96,43 @@ $card-max-width: 40rem;
     &::after {
       content: url("./../images/leaves/menu/right.svg");
       position: absolute;
-      bottom: 39rem;
-      left: -9.5%;
+      bottom: 29rem;
+      left: -3rem;
       z-index: 2;
+      transform: rotate(325deg);
     }
 
     &::before {
-      content: url("./../images/leaves/menu/left.svg");
+      content: url("./../images/leaves/menu/right.svg");
       position: absolute;
       bottom: 25rem;
-      right: -15%;
+      right: -8%;
       z-index: 0;
       transform: rotate(180deg);
     }
   }
 }
 
+@media (min-width: 768px) {
+  $card-width: 65%;
+  .card {
+    width: $card-width;
+  }
+  .pseudo_card {
+    width: $card-width;
+    max-width: $card-max-width;
+  }
+}
+
 @media (min-width: 426px) {
   $card-width: 60%;
+
+  .card {
+    width: $card-width;
+  }
+
+  .pseudo_card {
+    width: $card-width;
+    max-width: $card-max-width;
+  }
 }
