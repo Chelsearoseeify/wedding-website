@@ -12,7 +12,7 @@ export default function Location({ type, place, time, address, city }) {
   };
   return (
     <>
-      {/* <div className={styles.pseudo_card}></div> */}
+      <div className={styles.pseudo_card_top}></div>
       <Card className={styles.card}>
         <Flex
           minWidth="max-content"
@@ -66,6 +66,8 @@ export default function Location({ type, place, time, address, city }) {
           )}
         </Flex>
       </Card>
+
+      <div className={styles.pseudo_card_bottom}></div>
     </>
   );
 }

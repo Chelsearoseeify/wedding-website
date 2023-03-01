@@ -1,13 +1,16 @@
 @import "./../../styles/mixins.scss";
 
+$card-width: 85%;
+
 .card {
-  width: 85%;
+  width: $card-width;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
   gap: 2rem;
   max-width: 40rem;
+  padding-bottom: 8rem;
 
   &_title {
     font-family: $fontfamily-fancy;
@@ -33,27 +36,83 @@
 }
 
 .pseudo_card {
+  width: $card-width;
+  margin: auto;
+
   &_top {
+    @extend .pseudo_card;
     position: relative;
-    /* 
-    &::before {
-      content: url("./angle.svg");
-      top: 0;
-      right: 0;
+
+    &::after {
+      content: url("./../images/leaves/menu/angle_top.svg");
       position: absolute;
-    } */
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    &::before {
+      content: url("./../images/leaves/menu/right.svg");
+      position: absolute;
+      top: 0;
+      right: -7.5%;
+      z-index: 0;
+    }
+  }
+
+  &_right {
+    @extend .pseudo_card;
+    position: relative;
+
+    &::after {
+      content: url("./../images/leaves/menu/right.svg");
+      position: absolute;
+      top: 39rem;
+      left: -8.5%;
+      z-index: 2;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      content: url("./../images/leaves/menu/right.svg");
+      position: absolute;
+      top: 25rem;
+      right: -7.5%;
+      z-index: 0;
+    }
   }
 
   &_bottom {
+    @extend .pseudo_card;
     position: relative;
 
-    &::before {
-      content: url("./../images/leaves/menubottom.svg");
+    &::after {
+      content: url("./../images/leaves/menu/angle_bottom.svg");
       position: absolute;
-      width: 200px;
-      height: 200px;
-      bottom: 0rem;
-      left: -5.5rem;
+      bottom: -8px;
+      right: -2px;
+      z-index: 2;
+    }
+  }
+
+  &_left {
+    @extend .pseudo_card;
+    position: relative;
+
+    &::after {
+      content: url("./../images/leaves/menu/left.svg");
+      position: absolute;
+      bottom: 39rem;
+      left: -9.5%;
+      z-index: 2;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      content: url("./../images/leaves/menu/left.svg");
+      position: absolute;
+      bottom: 25rem;
+      right: -9%;
       z-index: 0;
     }
   }
