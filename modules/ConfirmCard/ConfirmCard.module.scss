@@ -1,5 +1,7 @@
 @import "./../../styles/mixins.scss";
 
+$card-width: 85%;
+
 .card {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   position: relative;
   z-index: 1;
   padding: 2rem 1rem;
-  width: 20rem;
+  width: $card-width;
 
   &_title {
     font-family: $fontfamily-fancy;
@@ -20,29 +22,30 @@
   }
 }
 .pseudo_card {
+  width: $card-width;
   &_top {
+    @extend .pseudo_card;
     position: relative;
 
     &::before {
-      content: url("./../images/leaves/menutop.svg");
+      content: url("./../images/leaves/confirmation/left.svg");
       position: absolute;
-
+      transform: rotate(180deg);
       top: 0rem;
-      right: 0;
+      left: -2rem;
       z-index: 0;
     }
   }
 
   &_bottom {
+    @extend .pseudo_card;
     position: relative;
 
     &::before {
-      content: url("./../images/leaves/menubottom.svg");
+      content: url("./../images/leaves/confirmation/right.svg");
       position: absolute;
-      width: 200px;
-      height: 200px;
-      bottom: 0rem;
-      left: -5.5rem;
+      bottom: -4rem;
+      right: -3rem;
       z-index: 0;
     }
   }

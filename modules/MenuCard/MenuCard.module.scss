@@ -50,14 +50,6 @@ $card-width: 85%;
       left: 0;
       z-index: 2;
     }
-
-    &::before {
-      content: url("./../images/leaves/menu/right.svg");
-      position: absolute;
-      top: 0;
-      right: -7.5%;
-      z-index: 0;
-    }
   }
 
   &_right {

@@ -116,6 +116,7 @@ export default function Confirm() {
               className={styles.button}
               margin={"auto"}
               onClick={onSubmit}
+              size="sm"
             >
               Invia
             </Button>

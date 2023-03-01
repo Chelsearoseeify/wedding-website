@@ -2,17 +2,19 @@ import styles from "./index.module.scss";
 import Heading from "../../modules/common/Heading/Heading.component";
 import Card from "../../modules/common/Card/Card.component";
 import { CopyIcon } from "@chakra-ui/icons";
-import { Text, Flex, IconButton } from "@chakra-ui/react";
+import { Text, Flex, IconButton, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function HoneyMoonSection() {
-  const iban = "IT65N0305801604100571094887";
+  const iban = "IT 65 N 03058 01604 100571094887";
+  const iban_to_copy = "IT65N0305801604100571094887";
 
   return (
     <section classNames={styles.container}>
       <Heading title="Luna di Miele" subtitle="Voliamo in Madagascar!" />
-      <Flex flexDirection={"row"}>
+      <Flex flexDirection={"column"}>
+        <div className={styles.pseudo_card_top} />
         <Card className={styles.card}>
           <div className={styles.image_container}>
             <Image src="/lemurs.jpg" alt="Lemurs" width={450} height={320} />
@@ -26,29 +28,34 @@ export default function HoneyMoonSection() {
             <Text>
               Se desiderate contruibuire alla nostra luna di miele, vi lasciamo
               qui i riferimenti.
-            </Text>
+            </Text>{" "}
+            <Flex align={"center"} justify="center">
+              <CopyToClipboard
+                text={iban_to_copy}
+                onCopy={() => console.log("yay")}
+              >
+                <Button
+                  aria-label="Copy IBAN"
+                  icon={<CopyIcon />}
+                  isRound
+                  size={"sm"}
+                  className={styles.copy_iban}
+                >
+                  Copy IBAN
+                </Button>
+              </CopyToClipboard>
+            </Flex>
             <Flex
-              direction={"row"}
+              direction={"column"}
               align="center"
               gap={2}
               className={styles.iban_container}
             >
               <Text>{iban}</Text>
-              <CopyToClipboard
-                text={iban.replace(" ", "")}
-                onCopy={() => console.log("yay")}
-              >
-                <IconButton
-                  aria-label="Copy IBAN"
-                  icon={<CopyIcon />}
-                  isRound
-                  size={"md"}
-                  className={styles.copy_iban}
-                />
-              </CopyToClipboard>
             </Flex>
           </Flex>
         </Card>
+        <div className={styles.pseudo_card_bottom} />
       </Flex>
     </section>
   );
