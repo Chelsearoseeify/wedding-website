@@ -1,15 +1,18 @@
 @import "./../../styles/mixins.scss";
 
 $card-width: 90%;
+$card-max-width: 40rem;
 
 .card {
   width: $card-width;
+  max-width: $card-max-width;
   text-align: center;
   z-index: 2;
 }
 
 .pseudo_card {
   width: $card-width;
+  max-width: $card-max-width;
   margin: auto;
 
   &_top {

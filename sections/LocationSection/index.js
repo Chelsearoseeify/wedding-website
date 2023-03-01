@@ -12,7 +12,7 @@ export default function LocationSection() {
           "Se seguite le mappe troverete gli sposi. E' impossibile perdersi"
         }
       />
-      <Flex gap={8} direction={"column"}>
+      <div className={styles.card_wrapper}>
         <Location
           type="Cerimonia"
           place={"Parrocchia San Francesco"}
@@ -27,7 +27,7 @@ export default function LocationSection() {
           address={"Via Luigi Cadorna 327"}
           city={"2027 Ispra, VA"}
         />
-      </Flex>
+      </div>
     </section>
   );
 }

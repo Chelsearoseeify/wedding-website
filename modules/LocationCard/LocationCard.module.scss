@@ -84,3 +84,61 @@ $card-width: 90%;
     width: $card-width;
   }
 }
+
+@media (orientation: landscape) {
+  $card-width: 100%;
+
+  .card {
+    width: $card-width;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    max-width: 45rem;
+
+    &_title {
+      margin-top: 1rem;
+      font-family: $fontfamily-fancy;
+      font-size: 4.5rem;
+      line-height: 4rem;
+    }
+
+    &_text {
+      font-family: $fontfamily-base;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  .pseudo_card {
+    width: $card-width;
+    margin: auto;
+
+    &_top {
+      @extend .pseudo_card;
+      position: relative;
+
+      &::before {
+        content: url("./../images/leaves/location/top.svg");
+        position: absolute;
+
+        top: -2rem;
+        right: -5%;
+        z-index: 0;
+      }
+    }
+    &_bottom {
+      @extend .pseudo_card;
+      position: relative;
+
+      &::before {
+        content: url("./../images/leaves/location/bottom.svg");
+        position: absolute;
+
+        bottom: -5rem;
+        left: -5%;
+        z-index: -1;
+      }
+    }
+  }
+}

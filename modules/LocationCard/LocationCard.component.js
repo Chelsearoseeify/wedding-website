@@ -11,7 +11,7 @@ export default function Location({ type, place, time, address, city }) {
     lng: -122.08427,
   };
   return (
-    <>
+    <div>
       <div className={styles.pseudo_card_top}></div>
       <Card className={styles.card}>
         <Flex
@@ -68,6 +68,6 @@ export default function Location({ type, place, time, address, city }) {
       </Card>
 
       <div className={styles.pseudo_card_bottom}></div>
-    </>
+    </div>
   );
 }

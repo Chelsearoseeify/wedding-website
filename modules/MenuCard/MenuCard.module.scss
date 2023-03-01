@@ -1,15 +1,16 @@
 @import "./../../styles/mixins.scss";
 
 $card-width: 85%;
+$card-max-width: 40rem;
 
 .card {
   width: $card-width;
+  max-width: $card-max-width;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
-  gap: 2rem;
-  max-width: 40rem;
   padding-bottom: 8rem;
 
   &_title {
@@ -37,6 +38,7 @@ $card-width: 85%;
 
 .pseudo_card {
   width: $card-width;
+  max-width: $card-max-width;
   margin: auto;
 
   &_top {
@@ -92,26 +94,24 @@ $card-width: 85%;
     position: relative;
 
     &::after {
-      content: url("./../images/leaves/menu/left.svg");
+      content: url("./../images/leaves/menu/right.svg");
       position: absolute;
       bottom: 39rem;
       left: -9.5%;
       z-index: 2;
-      transform: rotate(180deg);
     }
 
     &::before {
       content: url("./../images/leaves/menu/left.svg");
       position: absolute;
       bottom: 25rem;
-      right: -9%;
+      right: -15%;
       z-index: 0;
+      transform: rotate(180deg);
     }
   }
 }
 
 @media (min-width: 426px) {
-  .card {
-    width: 60%;
-  }
+  $card-width: 60%;
 }
