@@ -1,5 +1,5 @@
-import styles from './index.module.scss';
+import styles from "./index.module.scss";
 
 export default function ContactsSection() {
-	return <section classNames={styles.container}></section>;
+  return <section className={styles.container}></section>;
 }

@@ -24,9 +24,9 @@ import { send } from "emailjs-com";
 const emptyGuest = (index = 0) => {
   return {
     index,
-    name: null,
-    surname: null,
-    preferences: null,
+    name: undefined,
+    surname: undefined,
+    preferences: undefined,
   };
 };
 

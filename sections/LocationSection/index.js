@@ -5,7 +5,7 @@ import Heading from "../../modules/common/Heading/Heading.component";
 
 export default function LocationSection() {
   return (
-    <section classNames={styles.container}>
+    <section className={styles.container}>
       <Heading
         title="Location"
         subtitle={

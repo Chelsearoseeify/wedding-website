@@ -4,7 +4,7 @@ import Heading from "../../modules/common/Heading/Heading.component";
 
 export default function MenuSection() {
   return (
-    <section classNames={styles.container}>
+    <section className={styles.container}>
       <Heading
         title="Menu"
         subtitle={

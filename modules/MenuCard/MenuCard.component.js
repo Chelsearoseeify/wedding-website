@@ -75,12 +75,16 @@ export default function Menu() {
           </Text>
           <Flex direction={"column"} gap="2" style={{ maxWidth: "90%" }}>
             {antipasti.map((a) => (
-              <Flex direction={"column"} gap="0">
+              <Flex direction={"column"} gap="0" key={a.title}>
                 <Text className={styles.card_text} align={"center"}>
                   {a.title}
                 </Text>
-                {a.description.map((e) => (
-                  <span className={styles.card_description} align={"center"}>
+                {a.description.map((e, index) => (
+                  <span
+                    key={index}
+                    className={styles.card_description}
+                    align={"center"}
+                  >
                     {e}
                   </span>
                 ))}

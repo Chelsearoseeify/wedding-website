@@ -32,8 +32,8 @@ export default function GuestForm({ guest, setGuests, setIsValid, index }) {
           return (
             guest.name !== "" &&
             guest.surname !== "" &&
-            guest.name !== null &&
-            guest.surname !== null
+            guest.name !== undefined &&
+            guest.surname !== undefined
           );
         else return el;
       }),
@@ -41,10 +41,9 @@ export default function GuestForm({ guest, setGuests, setIsValid, index }) {
   };
 
   return (
-    <Flex gap={3} shouldWrapChildren direction={{ base: "column", lg: "row" }}>
+    <Flex gap={3} direction={{ base: "column", lg: "row" }}>
       <Flex
         gap={3}
-        shouldWrapChildren
         direction={{ base: "column", md: "row" }}
         width={{ lg: "100%" }}
       >

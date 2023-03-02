@@ -11,7 +11,7 @@ export default function HoneyMoonSection() {
   const iban_to_copy = "IT65N0305801604100571094887";
 
   return (
-    <section classNames={styles.container}>
+    <section className={styles.container}>
       <Heading title="Luna di Miele" subtitle="Voliamo in Madagascar!" />
       <Flex flexDirection={"column"}>
         <div className={styles.pseudo_card_top} />
@@ -37,7 +37,6 @@ export default function HoneyMoonSection() {
                 <Button
                   aria-label="Copy IBAN"
                   icon={<CopyIcon />}
-                  isRound
                   size={"sm"}
                   className={styles.copy_iban}
                 >

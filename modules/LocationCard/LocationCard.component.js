@@ -47,10 +47,10 @@ export default function Location({ type, place, time, address, city }) {
               height="300"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=Via%20Eletto,%20Via%20Lualdi,%2021,%2028100%20Novara%20NO&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
+              frameBorder="0"
               scrolling="no"
-              marginheight="0"
-              marginwidth="0"
+              marginHeight="0"
+              marginWidth="0"
             ></iframe>
           ) : (
             <iframe
@@ -58,10 +58,10 @@ export default function Location({ type, place, time, address, city }) {
               height="300"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=Via%20Luigi%20Cadorna%20327,%202027%20Ispra,%20VA&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
+              frameBorder="0"
               scrolling="no"
-              marginheight="0"
-              marginwidth="0"
+              marginHeight="0"
+              marginWidth="0"
             ></iframe>
           )}
         </Flex>

@@ -13,7 +13,7 @@ export default function Invito() {
         {
           <Grid
             gap={1}
-            autoFlow="row dense"
+            autoflow="row dense"
             className={styles["card_text-container"]}
           >
             <Text className={styles.plain_text} align={"center"}>

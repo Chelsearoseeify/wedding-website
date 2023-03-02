@@ -4,7 +4,7 @@ import Timeline from "../../modules/Timeline/Timeline.component";
 
 export default function OurStorySection() {
   return (
-    <section classNames={styles.container}>
+    <section className={styles.container}>
       <Heading
         title={"La Nostra Storia"}
         subtitle={

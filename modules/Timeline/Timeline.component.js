@@ -82,6 +82,7 @@ export default function Timeline() {
     <div className={styles.container}>
       {timelineElements.map((el, index) => (
         <div
+          key={el.title}
           className={clsx(
             styles["timeline-block"],
             styles[`timeline-block-${index % 2 === 0 ? "right" : "left"}`]

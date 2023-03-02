@@ -8,7 +8,7 @@ export default function Invito() {
     <Card className={styles.card_container}>
       <div className={clsx(styles.leave_container, styles.top)} />
       <div className={styles.text_container}>
-        <div autoFlow="row dense" className={styles["text_container-border"]}>
+        <div autoflow="row dense" className={styles["text_container-border"]}>
           <Text className={styles.plain_text} align={"center"}>
             Siete invitati al matrimonio
           </Text>

@@ -47,6 +47,7 @@ export default function Footer({
             className={
               styles[`nav_item${item === selectedMenuItem ? "--selected" : ""}`]
             }
+            key={item.id}
           >
             <div onClick={() => setSelectedMenuItem(item.name)}>
               {item.name}
