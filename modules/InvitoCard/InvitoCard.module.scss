@@ -95,46 +95,47 @@
     align-items: center;
   }
 }
+@media (orientation: portrait) {
+  @media (min-width: 768px) {
+    .card_container {
+      max-width: 34rem;
+      max-height: 58rem;
+    }
 
-@media (min-width: 768px) {
-  .card_container {
-    max-width: 34rem;
-    max-height: 58rem;
-  }
-
-  .leave_container {
-    height: 18%;
-  }
-  .text_container {
-    &-border {
-      gap: 1.4rem;
+    .leave_container {
+      height: 18%;
+    }
+    .text_container {
+      &-border {
+        gap: 1.4rem;
+      }
+    }
+    .date {
+      font-size: 2.2rem;
+    }
+    .plain_text {
+      font-size: 1.2rem;
+    }
+    .names {
+      &_text {
+        font-size: 10rem;
+        line-height: 10rem;
+        width: 100%;
+        color: $text-color-base;
+        text-align: center;
+      }
     }
   }
-  .date {
-    font-size: 2.2rem;
-  }
-  .plain_text {
-    font-size: 1.2rem;
-  }
-  .names {
-    &_text {
-      font-size: 10rem;
-      line-height: 10rem;
-      width: 100%;
-      color: $text-color-base;
-      text-align: center;
+
+  @media (min-width: 820px) {
+    .card_container {
+      max-width: 34rem;
+      max-height: 58rem;
     }
-  }
-}
 
-@media (min-width: 820px) {
-  .card_container {
-    max-width: 34rem;
-    max-height: 58rem;
-  }
-
-  .leave_container {
-    height: 19%;
+    .leave_container {
+      height: 19%;
+    }
   }
 }
 
@@ -189,7 +190,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 1020px) {
     .card_container {
       max-width: 58rem;
       max-height: 34rem;
@@ -216,11 +217,43 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) and (min-height: 544px) {
+    .card_container {
+      max-width: 58rem;
+      max-height: 34rem;
+    }
+    .text_container {
+      &-border {
+        gap: 1.4rem;
+      }
+    }
+    .date {
+      font-size: 2.2rem;
+    }
+    .plain_text {
+      font-size: 1.2rem;
+    }
+    .names {
+      &_text {
+        font-size: 10rem;
+        line-height: 10rem;
+        width: 100%;
+        color: $text-color-base;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
     .card_container {
       max-width: 60rem;
       max-height: 32rem;
     }
+
+    .leave_container {
+      width: 12rem;
+    }
+
     .text_container {
       &-border {
         gap: 1.4rem;

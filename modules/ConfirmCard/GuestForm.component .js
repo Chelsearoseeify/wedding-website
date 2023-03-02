@@ -78,21 +78,23 @@ export default function GuestForm({ guest, setGuests, setIsValid, index }) {
         </FormControl>
       </Flex>
       <Box w={{ base: "100%", lg: "70%" }}>
-        <Text className={styles.label}>Preferenze alimentari</Text>
-        <Select
-          defaultValue={"none"}
-          value={guest.preferences}
-          onChange={(event) => updateGuest(event.target.value, "preferences")}
-          className={styles.input}
-        >
-          <option value="none">Nessuna</option>
-          <option value="celiaco">Celiaco</option>
-          <option value="intollerante_al_lattosio">
-            Intollerante al lattosio
-          </option>
-          <option value="vegetariano">Vegetariano</option>
-          <option value="vegano">Vegano</option>
-        </Select>
+        <FormControl>
+          <FormLabel className={styles.label}>Preferenze alimentari</FormLabel>
+          <Select
+            defaultValue={"none"}
+            value={guest.preferences}
+            onChange={(event) => updateGuest(event.target.value, "preferences")}
+            className={styles.input}
+          >
+            <option value="none">Nessuna</option>
+            <option value="celiaco">Celiaco</option>
+            <option value="intollerante_al_lattosio">
+              Intollerante al lattosio
+            </option>
+            <option value="vegetariano">Vegetariano</option>
+            <option value="vegano">Vegano</option>
+          </Select>
+        </FormControl>
       </Box>
     </Flex>
   );

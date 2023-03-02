@@ -1,8 +1,12 @@
-import styles from './index.module.scss';
-import Invito from '../../modules/InvitoCard/InvitoCard.component';
-import Image from 'next/image';
-import { Flex } from '@chakra-ui/react';
+import styles from "./index.module.scss";
+import Invito from "../../modules/InvitoCard/InvitoCard.component";
+import Image from "next/image";
+import { Flex } from "@chakra-ui/react";
 
 export default function InvitoSection() {
-	return <div className={styles.invito_container}><Invito /></div>;
+  return (
+    <div className={styles.invito_container}>
+      <Invito />
+    </div>
+  );
 }

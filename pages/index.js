@@ -32,25 +32,24 @@ export default function Home() {
   ];
   const [selectedMenuItem, setSelectedMenuItem] = useState("La Nostra Storia");
 
-  const size = useWindowSize();
+  const { width, height } = useWindowSize();
 
   return (
     <>
       <div className={styles.base}>
-        <MenuFAB
-          items={menuItems}
-          selectedMenuItem={selectedMenuItem}
-          setSelectedMenuItem={setSelectedMenuItem}
-        />
-        {/*   <Navbar
-          items={menuItems}
-          selectedMenuItem={selectedMenuItem}
-          setSelectedMenuItem={setSelectedMenuItem}
-        /> */}
-        {/*   <div style={{ fontSize: "2rem" }}>
-          {size.width}px / {size.height}px
-        </div> */}
-
+        {width >= 1025 ? (
+          <Navbar
+            items={menuItems}
+            selectedMenuItem={selectedMenuItem}
+            setSelectedMenuItem={setSelectedMenuItem}
+          />
+        ) : (
+          <MenuFAB
+            items={menuItems}
+            selectedMenuItem={selectedMenuItem}
+            setSelectedMenuItem={setSelectedMenuItem}
+          />
+        )}
         {menuItems.map((item) => {
           return (
             <div key={item.id} id={item.id} className={styles.section}>
