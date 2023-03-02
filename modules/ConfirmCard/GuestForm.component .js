@@ -7,6 +7,10 @@ import {
   Select,
   IconButton,
   Box,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+  FormErrorMessage,
 } from "@chakra-ui/react";
 import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 import Card from "../common/Card/Card.component";
@@ -14,12 +18,24 @@ import { MenuBottom } from "../images/leaves/MenuBottom";
 import { MenuTop } from "../images/leaves/MenuTop";
 import clsx from "clsx";
 
-export default function GuestForm({ guest, setGuests }) {
+export default function GuestForm({ guest, setGuests, setIsValid, index }) {
   const updateGuest = (value, field) => {
     setGuests((prev) => [
       ...prev.map((g) => {
         if (g.index === guest.index) g[field] = value;
         return g;
+      }),
+    ]);
+    setIsValid((prev) => [
+      ...prev.map((el, i) => {
+        if (i === index)
+          return (
+            guest.name !== "" &&
+            guest.surname !== "" &&
+            guest.name !== null &&
+            guest.surname !== null
+          );
+        else return el;
       }),
     ]);
   };
@@ -32,24 +48,35 @@ export default function GuestForm({ guest, setGuests }) {
         direction={{ base: "column", md: "row" }}
         width={{ lg: "100%" }}
       >
-        <Box w="100%">
-          <Text className={styles.label}>Nome</Text>
+        <FormControl isInvalid={guest.name === ""}>
+          <FormLabel className={styles.label}>Nome</FormLabel>
           <Input
             placeholder="Il tuo nome"
             value={guest.name}
             onChange={(event) => updateGuest(event.target.value, "name")}
             className={styles.input}
           />
-        </Box>
-        <Box w="100%">
-          <Text className={styles.label}>Cognome</Text>
+          {!guest.name === "" ? (
+            <FormHelperText></FormHelperText>
+          ) : (
+            <FormErrorMessage>Il nome è necessario</FormErrorMessage>
+          )}
+        </FormControl>
+
+        <FormControl isInvalid={guest.surname === ""}>
+          <FormLabel className={styles.label}>Cognome</FormLabel>
           <Input
             placeholder="Il tuo cognome"
             value={guest.surname}
             onChange={(event) => updateGuest(event.target.value, "surname")}
             className={styles.input}
           />
-        </Box>
+          {!guest.surname === "" ? (
+            <FormHelperText></FormHelperText>
+          ) : (
+            <FormErrorMessage>Il cognome è necessario</FormErrorMessage>
+          )}
+        </FormControl>
       </Flex>
       <Box w={{ base: "100%", lg: "70%" }}>
         <Text className={styles.label}>Preferenze alimentari</Text>

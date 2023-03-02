@@ -32,7 +32,7 @@ export default function HoneyMoonSection() {
             <Flex align={"center"} justify="center">
               <CopyToClipboard
                 text={iban_to_copy}
-                onCopy={() => console.log("yay")}
+                onCopy={() => console.log("copied")}
               >
                 <Button
                   aria-label="Copy IBAN"

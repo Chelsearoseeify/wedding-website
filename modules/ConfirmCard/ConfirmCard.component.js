@@ -35,6 +35,7 @@ export default function Confirm() {
   const [message, setMessage] = useState("");
   const [lastUserIndex, setLastUserIndex] = useState(0);
   const [sent, setSent] = useState(false);
+  const [isValid, setIsValid] = useState([false]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -73,16 +74,24 @@ export default function Confirm() {
                 key={g.index}
                 className={styles.form_container}
               >
-                <GuestForm guest={g} setGuests={setGuests} />
+                <GuestForm
+                  guest={g}
+                  index={index}
+                  setGuests={setGuests}
+                  setIsValid={setIsValid}
+                />
                 {guests.length > 1 && (
                   <IconButton
                     aria-label="Add guest"
                     icon={<MinusIcon />}
-                    onClick={() =>
+                    onClick={() => {
                       setGuests((prev) =>
                         prev.filter((guest) => g.index !== guest.index)
-                      )
-                    }
+                      );
+                      const isValidCopy = [...isValid];
+                      isValidCopy.splice(index, 1);
+                      setIsValid([...isValidCopy]);
+                    }}
                     className={clsx(styles.button, styles.icon_button)}
                     size={"xs"}
                   />
@@ -95,6 +104,7 @@ export default function Confirm() {
               onClick={() => {
                 setGuests((prev) => [...prev, emptyGuest(lastUserIndex + 1)]);
                 setLastUserIndex((prev) => prev + 1);
+                setIsValid([...isValid, false]);
               }}
               className={clsx(styles.button)}
               size={"sm"}
@@ -117,6 +127,7 @@ export default function Confirm() {
               margin={"auto"}
               onClick={onSubmit}
               size="sm"
+              disabled={isValid.some((el) => !el)}
             >
               Invia
             </Button>
