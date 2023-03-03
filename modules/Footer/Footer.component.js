@@ -85,6 +85,16 @@ export default function Footer({
           />
         </CopyToClipboard>
       </Flex>
+      <Flex className={styles.signing}>
+        © 2023{" "}
+        <a
+          href={"https://github.com/Chelsearoseeify"}
+          style={{ marginLeft: 5 }}
+        >
+          Selene Malosso
+        </a>
+        . All rights reserved.
+      </Flex>
     </Flex>
   );
 }
