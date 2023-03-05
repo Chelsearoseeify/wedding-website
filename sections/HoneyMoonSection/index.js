@@ -26,7 +26,7 @@ export default function HoneyMoonSection() {
             </Text>
             <Text>Grazie di esserlo da sempre.</Text>
             <Text>
-              Se desiderate contruibuire alla nostra luna di miele, vi lasciamo
+              Se desiderate contribuire alla nostra luna di miele, vi lasciamo
               qui i riferimenti.
             </Text>{" "}
             <Flex align={"center"} justify="center">
